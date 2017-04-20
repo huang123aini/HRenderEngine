@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF1275EC1EA5B87F00985047 /* HObjectProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1275EB1EA5B87F00985047 /* HObjectProgram.m */; };
+		FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275EE1EA5BBEB00985047 /* objectShader.vsh */; };
+		FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275EF1EA5BBEB00985047 /* objectShader.fsh */; };
+		FF1275F41EA5BCAD00985047 /* HAVPlayerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */; };
+		FF1275F91EA5BCE300985047 /* avplayerShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F51EA5BCE300985047 /* avplayerShader.fsh */; };
+		FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F61EA5BCE300985047 /* avplayerShader.vsh */; };
+		FF1275FB1EA5BCE300985047 /* ijkplayerShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */; };
+		FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */; };
+		FF1275FF1EA5C2CB00985047 /* HIJKPlayerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1275FE1EA5C2CB00985047 /* HIJKPlayerProgram.m */; };
+		FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276051EA5E39900985047 /* HDistortionProgram.m */; };
+		FF1276541EA61CFE00985047 /* HGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276531EA61CFE00985047 /* HGLKViewController.m */; };
+		FF1276571EA704F600985047 /* HVideoTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276561EA704F600985047 /* HVideoTexture.m */; };
+		FF12765C1EA7165900985047 /* HDemosVc.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12765B1EA7165900985047 /* HDemosVc.m */; };
+		FF1276621EA7386A00985047 /* HGLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276611EA7386A00985047 /* HGLModel.m */; };
+		FF1276651EA738CC00985047 /* HGLNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276641EA738CC00985047 /* HGLNormalModel.m */; };
+		FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276671EA7391B00985047 /* HGLVRModel.m */; };
+		FF12766A1EA73FDB00985047 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1276691EA73FDB00985047 /* 6.jpg */; };
+		FF1276741EA74F9200985047 /* HRect.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276731EA74F9200985047 /* HRect.m */; };
+		FF1276771EA74FB300985047 /* HSize.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276761EA74FB300985047 /* HSize.m */; };
+		FF12767A1EA7528B00985047 /* HSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276791EA7528B00985047 /* HSpriteFrame.m */; };
+		FF12767D1EA7535200985047 /* HMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12767C1EA7535200985047 /* HMathUtils.m */; };
+		FF1276801EA7570D00985047 /* HGLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12767F1EA7570D00985047 /* HGLManager.m */; };
+		FF1276841EA7706500985047 /* HDownLoadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276831EA7706500985047 /* HDownLoadUtils.m */; };
+		FF1276871EA7725300985047 /* HFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276861EA7725300985047 /* HFileTools.m */; };
+		FF152ABA1EA49B8F00BA2B1B /* HNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AB91EA49B8F00BA2B1B /* HNode.m */; };
+		FF152ABF1EA49BF800BA2B1B /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF152ABE1EA49BF800BA2B1B /* GLKit.framework */; };
+		FF152AC11EA49BFF00BA2B1B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF152AC01EA49BFF00BA2B1B /* OpenGLES.framework */; };
+		FF152AC61EA49F2B00BA2B1B /* HTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AC51EA49F2B00BA2B1B /* HTexture.m */; };
+		FF152ACE1EA49FEA00BA2B1B /* HProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152ACD1EA49FEA00BA2B1B /* HProgram.m */; };
+		FF152AD01EA4A1B500BA2B1B /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = FF152ACF1EA4A1B500BA2B1B /* ReadMe */; };
+		FF152AD41EA4A32900BA2B1B /* GLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AD31EA4A32900BA2B1B /* GLUtils.m */; };
+		FF152ADB1EA4A79E00BA2B1B /* HRenderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152ADA1EA4A79E00BA2B1B /* HRenderObject.m */; };
+		FF152ADE1EA4A88F00BA2B1B /* HSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152ADD1EA4A88F00BA2B1B /* HSprite.m */; };
+		FF152AE11EA4A8C400BA2B1B /* HSprite3D.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AE01EA4A8C400BA2B1B /* HSprite3D.m */; };
+		FF152AED1EA4C84500BA2B1B /* HCameraMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AEC1EA4C84500BA2B1B /* HCameraMatrix.m */; };
+		FF152AF01EA4C8BA00BA2B1B /* HSensors.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AEF1EA4C8BA00BA2B1B /* HSensors.m */; };
+		FF152AF31EA4C92900BA2B1B /* HFingerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AF21EA4C92900BA2B1B /* HFingerRotation.m */; };
+		FF152AF51EA4C9A000BA2B1B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF152AF41EA4C9A000BA2B1B /* CoreMotion.framework */; };
+		FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AF91EA4D7BC00BA2B1B /* HDistortionModel.m */; };
+		FF152AFD1EA4D7E000BA2B1B /* HDistortionRender.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */; };
+		FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */; };
+		FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */; };
+		FFE44C951EA4737600A4D95A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE44C941EA4737600A4D95A /* main.m */; };
+		FFE44C981EA4737600A4D95A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE44C971EA4737600A4D95A /* AppDelegate.m */; };
+		FFE44C9B1EA4737600A4D95A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE44C9A1EA4737600A4D95A /* ViewController.m */; };
+		FFE44C9E1EA4737600A4D95A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE44C9C1EA4737600A4D95A /* Main.storyboard */; };
+		FFE44CA01EA4737600A4D95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE44C9F1EA4737600A4D95A /* Assets.xcassets */; };
+		FFE44CA31EA4737600A4D95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE44CA11EA4737600A4D95A /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF1275EA1EA5B87F00985047 /* HObjectProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HObjectProgram.h; path = ../render/HObjectProgram.h; sourceTree = "<group>"; };
+		FF1275EB1EA5B87F00985047 /* HObjectProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HObjectProgram.m; path = ../render/HObjectProgram.m; sourceTree = "<group>"; };
+		FF1275EE1EA5BBEB00985047 /* objectShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = objectShader.vsh; sourceTree = "<group>"; };
+		FF1275EF1EA5BBEB00985047 /* objectShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = objectShader.fsh; sourceTree = "<group>"; };
+		FF1275F21EA5BCAD00985047 /* HAVPlayerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAVPlayerProgram.h; sourceTree = "<group>"; };
+		FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAVPlayerProgram.m; sourceTree = "<group>"; };
+		FF1275F51EA5BCE300985047 /* avplayerShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = avplayerShader.fsh; sourceTree = "<group>"; };
+		FF1275F61EA5BCE300985047 /* avplayerShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = avplayerShader.vsh; sourceTree = "<group>"; };
+		FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ijkplayerShader.fsh; sourceTree = "<group>"; };
+		FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ijkplayerShader.vsh; sourceTree = "<group>"; };
+		FF1275FD1EA5C2CB00985047 /* HIJKPlayerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIJKPlayerProgram.h; sourceTree = "<group>"; };
+		FF1275FE1EA5C2CB00985047 /* HIJKPlayerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIJKPlayerProgram.m; sourceTree = "<group>"; };
+		FF1276041EA5E39900985047 /* HDistortionProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDistortionProgram.h; sourceTree = "<group>"; };
+		FF1276051EA5E39900985047 /* HDistortionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionProgram.m; sourceTree = "<group>"; };
+		FF1276521EA61CFE00985047 /* HGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLKViewController.h; sourceTree = "<group>"; };
+		FF1276531EA61CFE00985047 /* HGLKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLKViewController.m; sourceTree = "<group>"; };
+		FF1276551EA704F600985047 /* HVideoTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVideoTexture.h; sourceTree = "<group>"; };
+		FF1276561EA704F600985047 /* HVideoTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVideoTexture.m; sourceTree = "<group>"; };
+		FF12765A1EA7165900985047 /* HDemosVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDemosVc.h; sourceTree = "<group>"; };
+		FF12765B1EA7165900985047 /* HDemosVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDemosVc.m; sourceTree = "<group>"; };
+		FF1276601EA7386A00985047 /* HGLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLModel.h; sourceTree = "<group>"; };
+		FF1276611EA7386A00985047 /* HGLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLModel.m; sourceTree = "<group>"; };
+		FF1276631EA738CC00985047 /* HGLNormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLNormalModel.h; sourceTree = "<group>"; };
+		FF1276641EA738CC00985047 /* HGLNormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLNormalModel.m; sourceTree = "<group>"; };
+		FF1276661EA7391B00985047 /* HGLVRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLVRModel.h; sourceTree = "<group>"; };
+		FF1276671EA7391B00985047 /* HGLVRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLVRModel.m; sourceTree = "<group>"; };
+		FF1276691EA73FDB00985047 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = ../shaders/6.jpg; sourceTree = "<group>"; };
+		FF1276721EA74F9200985047 /* HRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRect.h; sourceTree = "<group>"; };
+		FF1276731EA74F9200985047 /* HRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRect.m; sourceTree = "<group>"; };
+		FF1276751EA74FB300985047 /* HSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSize.h; sourceTree = "<group>"; };
+		FF1276761EA74FB300985047 /* HSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSize.m; sourceTree = "<group>"; };
+		FF1276781EA7528B00985047 /* HSpriteFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSpriteFrame.h; sourceTree = "<group>"; };
+		FF1276791EA7528B00985047 /* HSpriteFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSpriteFrame.m; sourceTree = "<group>"; };
+		FF12767B1EA7535200985047 /* HMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMathUtils.h; sourceTree = "<group>"; };
+		FF12767C1EA7535200985047 /* HMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMathUtils.m; sourceTree = "<group>"; };
+		FF12767E1EA7570D00985047 /* HGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLManager.h; sourceTree = "<group>"; };
+		FF12767F1EA7570D00985047 /* HGLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLManager.m; sourceTree = "<group>"; };
+		FF1276821EA7706500985047 /* HDownLoadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDownLoadUtils.h; sourceTree = "<group>"; };
+		FF1276831EA7706500985047 /* HDownLoadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDownLoadUtils.m; sourceTree = "<group>"; };
+		FF1276851EA7725300985047 /* HFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFileTools.h; sourceTree = "<group>"; };
+		FF1276861EA7725300985047 /* HFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFileTools.m; sourceTree = "<group>"; };
+		FF152AB81EA49B8F00BA2B1B /* HNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNode.h; sourceTree = "<group>"; };
+		FF152AB91EA49B8F00BA2B1B /* HNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNode.m; sourceTree = "<group>"; };
+		FF152ABB1EA49BB600BA2B1B /* RenderEngine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderEngine.pch; sourceTree = "<group>"; };
+		FF152ABC1EA49BCD00BA2B1B /* HConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HConstants.h; sourceTree = "<group>"; };
+		FF152ABE1EA49BF800BA2B1B /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		FF152AC01EA49BFF00BA2B1B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		FF152AC21EA49CB400BA2B1B /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		FF152AC41EA49F2B00BA2B1B /* HTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTexture.h; sourceTree = "<group>"; };
+		FF152AC51EA49F2B00BA2B1B /* HTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTexture.m; sourceTree = "<group>"; };
+		FF152ACC1EA49FEA00BA2B1B /* HProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HProgram.h; path = ../render/HProgram.h; sourceTree = "<group>"; };
+		FF152ACD1EA49FEA00BA2B1B /* HProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HProgram.m; path = ../render/HProgram.m; sourceTree = "<group>"; };
+		FF152ACF1EA4A1B500BA2B1B /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		FF152AD11EA4A2F200BA2B1B /* HMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMacros.h; sourceTree = "<group>"; };
+		FF152AD21EA4A32900BA2B1B /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
+		FF152AD31EA4A32900BA2B1B /* GLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLUtils.m; sourceTree = "<group>"; };
+		FF152AD91EA4A79E00BA2B1B /* HRenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRenderObject.h; sourceTree = "<group>"; };
+		FF152ADA1EA4A79E00BA2B1B /* HRenderObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRenderObject.m; sourceTree = "<group>"; };
+		FF152ADC1EA4A88F00BA2B1B /* HSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSprite.h; sourceTree = "<group>"; };
+		FF152ADD1EA4A88F00BA2B1B /* HSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSprite.m; sourceTree = "<group>"; };
+		FF152ADF1EA4A8C400BA2B1B /* HSprite3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSprite3D.h; sourceTree = "<group>"; };
+		FF152AE01EA4A8C400BA2B1B /* HSprite3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSprite3D.m; sourceTree = "<group>"; };
+		FF152AEB1EA4C84500BA2B1B /* HCameraMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCameraMatrix.h; sourceTree = "<group>"; };
+		FF152AEC1EA4C84500BA2B1B /* HCameraMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCameraMatrix.m; sourceTree = "<group>"; };
+		FF152AEE1EA4C8BA00BA2B1B /* HSensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSensors.h; sourceTree = "<group>"; };
+		FF152AEF1EA4C8BA00BA2B1B /* HSensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSensors.m; sourceTree = "<group>"; };
+		FF152AF11EA4C92900BA2B1B /* HFingerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFingerRotation.h; sourceTree = "<group>"; };
+		FF152AF21EA4C92900BA2B1B /* HFingerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFingerRotation.m; sourceTree = "<group>"; };
+		FF152AF41EA4C9A000BA2B1B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FF152AF81EA4D7BC00BA2B1B /* HDistortionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDistortionModel.h; sourceTree = "<group>"; };
+		FF152AF91EA4D7BC00BA2B1B /* HDistortionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionModel.m; sourceTree = "<group>"; };
+		FF152AFB1EA4D7E000BA2B1B /* HDistortionRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDistortionRender.h; sourceTree = "<group>"; };
+		FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionRender.m; sourceTree = "<group>"; };
+		FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.vsh; sourceTree = "<group>"; };
+		FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.fsh; sourceTree = "<group>"; };
+		FFE44C901EA4737600A4D95A /* HRenderEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRenderEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE44C941EA4737600A4D95A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFE44C961EA4737600A4D95A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FFE44C971EA4737600A4D95A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FFE44C991EA4737600A4D95A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FFE44C9A1EA4737600A4D95A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FFE44C9D1EA4737600A4D95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFE44C9F1EA4737600A4D95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFE44CA21EA4737600A4D95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFE44CA41EA4737600A4D95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFE44C8D1EA4737600A4D95A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF152AF51EA4C9A000BA2B1B /* CoreMotion.framework in Frameworks */,
+				FF152AC11EA49BFF00BA2B1B /* OpenGLES.framework in Frameworks */,
+				FF152ABF1EA49BF800BA2B1B /* GLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF1275ED1EA5B8AF00985047 /* program */ = {
+			isa = PBXGroup;
+			children = (
+				FF152ACC1EA49FEA00BA2B1B /* HProgram.h */,
+				FF152ACD1EA49FEA00BA2B1B /* HProgram.m */,
+				FF1275EA1EA5B87F00985047 /* HObjectProgram.h */,
+				FF1275EB1EA5B87F00985047 /* HObjectProgram.m */,
+				FF1275F21EA5BCAD00985047 /* HAVPlayerProgram.h */,
+				FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */,
+				FF1275FD1EA5C2CB00985047 /* HIJKPlayerProgram.h */,
+				FF1275FE1EA5C2CB00985047 /* HIJKPlayerProgram.m */,
+				FF1276041EA5E39900985047 /* HDistortionProgram.h */,
+				FF1276051EA5E39900985047 /* HDistortionProgram.m */,
+			);
+			path = program;
+			sourceTree = "<group>";
+		};
+		FF1276591EA7160300985047 /* testDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FF12766B1EA73FE400985047 /* testResources */,
+				FF12765A1EA7165900985047 /* HDemosVc.h */,
+				FF12765B1EA7165900985047 /* HDemosVc.m */,
+			);
+			path = testDemo;
+			sourceTree = "<group>";
+		};
+		FF12766B1EA73FE400985047 /* testResources */ = {
+			isa = PBXGroup;
+			children = (
+				FF1276691EA73FDB00985047 /* 6.jpg */,
+			);
+			name = testResources;
+			sourceTree = "<group>";
+		};
+		FF1276701EA74F1100985047 /* sprite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = sprite;
+			sourceTree = "<group>";
+		};
+		FF1276711EA74F6700985047 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				FF1276721EA74F9200985047 /* HRect.h */,
+				FF1276731EA74F9200985047 /* HRect.m */,
+				FF1276751EA74FB300985047 /* HSize.h */,
+				FF1276761EA74FB300985047 /* HSize.m */,
+				FF1276781EA7528B00985047 /* HSpriteFrame.h */,
+				FF1276791EA7528B00985047 /* HSpriteFrame.m */,
+			);
+			name = math;
+			sourceTree = "<group>";
+		};
+		FF1276811EA7702900985047 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				FF1276821EA7706500985047 /* HDownLoadUtils.h */,
+				FF1276831EA7706500985047 /* HDownLoadUtils.m */,
+				FF1276851EA7725300985047 /* HFileTools.h */,
+				FF1276861EA7725300985047 /* HFileTools.m */,
+			);
+			name = file;
+			sourceTree = "<group>";
+		};
+		FF152AB41EA49B8200BA2B1B /* renderengine */ = {
+			isa = PBXGroup;
+			children = (
+				FF1276591EA7160300985047 /* testDemo */,
+				FF1275ED1EA5B8AF00985047 /* program */,
+				FF152AFE1EA4DA8E00BA2B1B /* shaders */,
+				FF152AF71EA4D78E00BA2B1B /* distortion */,
+				FF152AC81EA49F9F00BA2B1B /* model */,
+				FF152AC31EA49F1400BA2B1B /* texture */,
+				FF152AB51EA49B8200BA2B1B /* render */,
+				FF152AB61EA49B8200BA2B1B /* scene */,
+				FF152AB71EA49B8200BA2B1B /* utils */,
+				FF152ACF1EA4A1B500BA2B1B /* ReadMe */,
+			);
+			path = renderengine;
+			sourceTree = "<group>";
+		};
+		FF152AB51EA49B8200BA2B1B /* render */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		FF152AB61EA49B8200BA2B1B /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				FF152AB81EA49B8F00BA2B1B /* HNode.h */,
+				FF152AB91EA49B8F00BA2B1B /* HNode.m */,
+				FF152AD91EA4A79E00BA2B1B /* HRenderObject.h */,
+				FF152ADA1EA4A79E00BA2B1B /* HRenderObject.m */,
+				FF152ADC1EA4A88F00BA2B1B /* HSprite.h */,
+				FF152ADD1EA4A88F00BA2B1B /* HSprite.m */,
+				FF152ADF1EA4A8C400BA2B1B /* HSprite3D.h */,
+				FF152AE01EA4A8C400BA2B1B /* HSprite3D.m */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		FF152AB71EA49B8200BA2B1B /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FF1276811EA7702900985047 /* file */,
+				FF1276711EA74F6700985047 /* math */,
+				FF1276701EA74F1100985047 /* sprite */,
+				FF152AD81EA4A64800BA2B1B /* matrixUtils */,
+				FF152AC21EA49CB400BA2B1B /* Singleton.h */,
+				FF152ABB1EA49BB600BA2B1B /* RenderEngine.pch */,
+				FF152ABC1EA49BCD00BA2B1B /* HConstants.h */,
+				FF152AD11EA4A2F200BA2B1B /* HMacros.h */,
+				FF152AD21EA4A32900BA2B1B /* GLUtils.h */,
+				FF152AD31EA4A32900BA2B1B /* GLUtils.m */,
+				FF12767B1EA7535200985047 /* HMathUtils.h */,
+				FF12767C1EA7535200985047 /* HMathUtils.m */,
+				FF12767E1EA7570D00985047 /* HGLManager.h */,
+				FF12767F1EA7570D00985047 /* HGLManager.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		FF152ABD1EA49BDA00BA2B1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF152AF41EA4C9A000BA2B1B /* CoreMotion.framework */,
+				FF152AC01EA49BFF00BA2B1B /* OpenGLES.framework */,
+				FF152ABE1EA49BF800BA2B1B /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF152AC31EA49F1400BA2B1B /* texture */ = {
+			isa = PBXGroup;
+			children = (
+				FF152AC41EA49F2B00BA2B1B /* HTexture.h */,
+				FF152AC51EA49F2B00BA2B1B /* HTexture.m */,
+				FF1276551EA704F600985047 /* HVideoTexture.h */,
+				FF1276561EA704F600985047 /* HVideoTexture.m */,
+			);
+			path = texture;
+			sourceTree = "<group>";
+		};
+		FF152AC81EA49F9F00BA2B1B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FF1276601EA7386A00985047 /* HGLModel.h */,
+				FF1276611EA7386A00985047 /* HGLModel.m */,
+				FF1276631EA738CC00985047 /* HGLNormalModel.h */,
+				FF1276641EA738CC00985047 /* HGLNormalModel.m */,
+				FF1276661EA7391B00985047 /* HGLVRModel.h */,
+				FF1276671EA7391B00985047 /* HGLVRModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FF152AD81EA4A64800BA2B1B /* matrixUtils */ = {
+			isa = PBXGroup;
+			children = (
+				FF152AEB1EA4C84500BA2B1B /* HCameraMatrix.h */,
+				FF152AEC1EA4C84500BA2B1B /* HCameraMatrix.m */,
+				FF152AEE1EA4C8BA00BA2B1B /* HSensors.h */,
+				FF152AEF1EA4C8BA00BA2B1B /* HSensors.m */,
+				FF152AF11EA4C92900BA2B1B /* HFingerRotation.h */,
+				FF152AF21EA4C92900BA2B1B /* HFingerRotation.m */,
+			);
+			name = matrixUtils;
+			sourceTree = "<group>";
+		};
+		FF152AF71EA4D78E00BA2B1B /* distortion */ = {
+			isa = PBXGroup;
+			children = (
+				FF152AF81EA4D7BC00BA2B1B /* HDistortionModel.h */,
+				FF152AF91EA4D7BC00BA2B1B /* HDistortionModel.m */,
+				FF152AFB1EA4D7E000BA2B1B /* HDistortionRender.h */,
+				FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */,
+			);
+			path = distortion;
+			sourceTree = "<group>";
+		};
+		FF152AFE1EA4DA8E00BA2B1B /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				FF1275EE1EA5BBEB00985047 /* objectShader.vsh */,
+				FF1275EF1EA5BBEB00985047 /* objectShader.fsh */,
+				FF1275F61EA5BCE300985047 /* avplayerShader.vsh */,
+				FF1275F51EA5BCE300985047 /* avplayerShader.fsh */,
+				FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */,
+				FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */,
+				FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */,
+				FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		FFE44C871EA4737600A4D95A = {
+			isa = PBXGroup;
+			children = (
+				FF152ABD1EA49BDA00BA2B1B /* Frameworks */,
+				FFE44C921EA4737600A4D95A /* HRenderEngine */,
+				FFE44C911EA4737600A4D95A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFE44C911EA4737600A4D95A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFE44C901EA4737600A4D95A /* HRenderEngine.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFE44C921EA4737600A4D95A /* HRenderEngine */ = {
+			isa = PBXGroup;
+			children = (
+				FF152AB41EA49B8200BA2B1B /* renderengine */,
+				FFE44C961EA4737600A4D95A /* AppDelegate.h */,
+				FF1276521EA61CFE00985047 /* HGLKViewController.h */,
+				FF1276531EA61CFE00985047 /* HGLKViewController.m */,
+				FFE44C971EA4737600A4D95A /* AppDelegate.m */,
+				FFE44C991EA4737600A4D95A /* ViewController.h */,
+				FFE44C9A1EA4737600A4D95A /* ViewController.m */,
+				FFE44C9C1EA4737600A4D95A /* Main.storyboard */,
+				FFE44C9F1EA4737600A4D95A /* Assets.xcassets */,
+				FFE44CA11EA4737600A4D95A /* LaunchScreen.storyboard */,
+				FFE44CA41EA4737600A4D95A /* Info.plist */,
+				FFE44C931EA4737600A4D95A /* Supporting Files */,
+			);
+			path = HRenderEngine;
+			sourceTree = "<group>";
+		};
+		FFE44C931EA4737600A4D95A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFE44C941EA4737600A4D95A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFE44C8F1EA4737600A4D95A /* HRenderEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFE44CA71EA4737600A4D95A /* Build configuration list for PBXNativeTarget "HRenderEngine" */;
+			buildPhases = (
+				FFE44C8C1EA4737600A4D95A /* Sources */,
+				FFE44C8D1EA4737600A4D95A /* Frameworks */,
+				FFE44C8E1EA4737600A4D95A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HRenderEngine;
+			productName = HRenderEngine;
+			productReference = FFE44C901EA4737600A4D95A /* HRenderEngine.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFE44C881EA4737600A4D95A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "黄世平";
+				TargetAttributes = {
+					FFE44C8F1EA4737600A4D95A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MB5RM2D86F;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FFE44C8B1EA4737600A4D95A /* Build configuration list for PBXProject "HRenderEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFE44C871EA4737600A4D95A;
+			productRefGroup = FFE44C911EA4737600A4D95A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFE44C8F1EA4737600A4D95A /* HRenderEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFE44C8E1EA4737600A4D95A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */,
+				FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */,
+				FF12766A1EA73FDB00985047 /* 6.jpg in Resources */,
+				FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */,
+				FF152AD01EA4A1B500BA2B1B /* ReadMe in Resources */,
+				FFE44CA31EA4737600A4D95A /* LaunchScreen.storyboard in Resources */,
+				FFE44CA01EA4737600A4D95A /* Assets.xcassets in Resources */,
+				FF1275F91EA5BCE300985047 /* avplayerShader.fsh in Resources */,
+				FFE44C9E1EA4737600A4D95A /* Main.storyboard in Resources */,
+				FF1275FB1EA5BCE300985047 /* ijkplayerShader.fsh in Resources */,
+				FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */,
+				FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */,
+				FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFE44C8C1EA4737600A4D95A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF1276871EA7725300985047 /* HFileTools.m in Sources */,
+				FF152AF01EA4C8BA00BA2B1B /* HSensors.m in Sources */,
+				FF152AD41EA4A32900BA2B1B /* GLUtils.m in Sources */,
+				FF1276571EA704F600985047 /* HVideoTexture.m in Sources */,
+				FF152ABA1EA49B8F00BA2B1B /* HNode.m in Sources */,
+				FF1276651EA738CC00985047 /* HGLNormalModel.m in Sources */,
+				FF1275FF1EA5C2CB00985047 /* HIJKPlayerProgram.m in Sources */,
+				FF1276621EA7386A00985047 /* HGLModel.m in Sources */,
+				FF152AED1EA4C84500BA2B1B /* HCameraMatrix.m in Sources */,
+				FFE44C9B1EA4737600A4D95A /* ViewController.m in Sources */,
+				FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */,
+				FFE44C981EA4737600A4D95A /* AppDelegate.m in Sources */,
+				FFE44C951EA4737600A4D95A /* main.m in Sources */,
+				FF1276771EA74FB300985047 /* HSize.m in Sources */,
+				FF152AE11EA4A8C400BA2B1B /* HSprite3D.m in Sources */,
+				FF12765C1EA7165900985047 /* HDemosVc.m in Sources */,
+				FF152AFD1EA4D7E000BA2B1B /* HDistortionRender.m in Sources */,
+				FF12767D1EA7535200985047 /* HMathUtils.m in Sources */,
+				FF152ADB1EA4A79E00BA2B1B /* HRenderObject.m in Sources */,
+				FF1276741EA74F9200985047 /* HRect.m in Sources */,
+				FF152ACE1EA49FEA00BA2B1B /* HProgram.m in Sources */,
+				FF1276841EA7706500985047 /* HDownLoadUtils.m in Sources */,
+				FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */,
+				FF1276801EA7570D00985047 /* HGLManager.m in Sources */,
+				FF1276541EA61CFE00985047 /* HGLKViewController.m in Sources */,
+				FF1275F41EA5BCAD00985047 /* HAVPlayerProgram.m in Sources */,
+				FF1275EC1EA5B87F00985047 /* HObjectProgram.m in Sources */,
+				FF152AC61EA49F2B00BA2B1B /* HTexture.m in Sources */,
+				FF152ADE1EA4A88F00BA2B1B /* HSprite.m in Sources */,
+				FF152AF31EA4C92900BA2B1B /* HFingerRotation.m in Sources */,
+				FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */,
+				FF12767A1EA7528B00985047 /* HSpriteFrame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFE44C9C1EA4737600A4D95A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE44C9D1EA4737600A4D95A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FFE44CA11EA4737600A4D95A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFE44CA21EA4737600A4D95A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFE44CA51EA4737600A4D95A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFE44CA61EA4737600A4D95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFE44CA81EA4737600A4D95A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MB5RM2D86F;
+				GCC_PREFIX_HEADER = "/Users/huangshiping/Documents/GitHub项目/HRenderEngine/HRenderEngine/HRenderEngine/renderengine/utils/RenderEngine.pch";
+				INFOPLIST_FILE = HRenderEngine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangshiping.org.HRenderEngine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FFE44CA91EA4737600A4D95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MB5RM2D86F;
+				GCC_PREFIX_HEADER = "/Users/huangshiping/Documents/GitHub项目/HRenderEngine/HRenderEngine/HRenderEngine/renderengine/utils/RenderEngine.pch";
+				INFOPLIST_FILE = HRenderEngine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huangshiping.org.HRenderEngine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFE44C8B1EA4737600A4D95A /* Build configuration list for PBXProject "HRenderEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE44CA51EA4737600A4D95A /* Debug */,
+				FFE44CA61EA4737600A4D95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFE44CA71EA4737600A4D95A /* Build configuration list for PBXNativeTarget "HRenderEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFE44CA81EA4737600A4D95A /* Debug */,
+				FFE44CA91EA4737600A4D95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFE44C881EA4737600A4D95A /* Project object */;
+}

@@ -22,6 +22,7 @@
 #import "HObjectProgram.h"
 
 
+
 typedef NS_ENUM(NSUInteger,HVideoType)
 {
     HVideoTypeNormal,
@@ -42,7 +43,6 @@ typedef NS_ENUM(NSUInteger,HDisplayMode)
 @property(nonatomic,strong)HDistortionRender *distortionRender;
 
 @property(nonatomic,strong)HGLNormalModel* normalModel;
-@property(nonatomic,strong)HGLVRModel* vrModel;
 
 @property(nonatomic,strong)HVideoTexture* videoTexture;
 
@@ -54,8 +54,6 @@ typedef NS_ENUM(NSUInteger,HDisplayMode)
 
 @property(nonatomic,strong)HObjectProgram* objectProgram;
 @property(nonatomic,strong)HTexture* objectTexture;
-
-
 
 
 @end

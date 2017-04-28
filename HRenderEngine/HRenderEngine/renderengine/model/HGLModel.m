@@ -29,6 +29,10 @@
     
 }
 
+-(void)updateVertices
+{
+
+}
 
 -(void)setupGLData:(HProgram*)program
 {

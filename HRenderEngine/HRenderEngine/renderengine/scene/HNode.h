@@ -14,6 +14,9 @@
 @interface HNode : NSObject
 
 #pragma mark gamescene
+
+@property(nonatomic,strong)EAGLContext* context;
+
 @property(nonatomic,assign)GLKVector3 position;
 @property(nonatomic,assign)GLKVector3 rotation;
 @property(nonatomic,assign)GLKVector3 scale;
@@ -27,6 +30,9 @@
 -(void)update:(float)dt;
 -(void)draw;
 
+-(void)draw:(GLKMatrix4)projectionMatrix;
 
+//init in current context
+-(instancetype)initWithContext:(EAGLContext*)context;
 
 @end

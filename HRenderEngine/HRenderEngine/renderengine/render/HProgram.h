@@ -18,6 +18,7 @@
 @property(nonatomic,assign)GLuint program;
 /*Base attributes and uniforms : vertex position ,texture coord, space matrix */
 @property(nonatomic,assign)GLuint aPosition;
+@property(nonatomic,assign)GLuint aVertexColor; //vertex Color
 @property(nonatomic,assign)GLuint aTexCoord;
 @property(nonatomic,assign)GLuint uModelViewProjectionMatrix;
 

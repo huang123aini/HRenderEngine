@@ -2,47 +2,24 @@
 //  HMathUtils.m
 //  HRenderEngine
 //
-//  Created by 黄世平 on 17/4/19.
+//  Created by 黄世平 on 17/4/21.
 //  Copyright © 2017年 黄世平. All rights reserved.
 //
 
 #import "HMathUtils.h"
-#import <GLKit/GLKit.h>
-#import "HGLManager.h"
 
 @implementation HMathUtils
-+(float)contentScaleFactor:(GLKView*)view
++ (void)getGLCoordsFromCGRect:(CGRect
+                               )rect Coords:(GLfloat*)coords
 {
-   return view.contentScaleFactor;
-}
-
-
-+(HRect*) rectPointsToPixels:(HRect*)rect
-{
-    float scale = [HMathUtils contentScaleFactor:[HGLManager sharedHGLManager].renderView];
-    
-    HRect* rectResult = [[HRect alloc] init];
-    
-    GLKVector2 vec2 = GLKVector2Make(rect.origin.x * scale, rect.origin.y * scale);
-    rectResult.origin = vec2;
-    
-    rectResult.size.width = rect.size.width * scale;
-    rectResult.size.height = rect.size.height * scale;
-    return rectResult;
-}
-
-+(HRect*)rectPixelsToPoints:(HRect*)rect
-{
-    float scale = [HMathUtils contentScaleFactor:[HGLManager sharedHGLManager].renderView];
-    
-    HRect* rectResult = [[HRect alloc] init];
-    
-    GLKVector2 vec2 = GLKVector2Make(rect.origin.x / scale, rect.origin.y / scale);
-    rectResult.origin = vec2;
-    
-    rectResult.size.width = rect.size.width / scale;
-    rectResult.size.height = rect.size.height / scale;
-    return rectResult;
+    coords[0] = (GLfloat)rect.origin.x;
+    coords[1] = (GLfloat)rect.origin.y;
+    coords[2] = (GLfloat)(rect.origin.x + rect.size.width);
+    coords[3] = (GLfloat)rect.origin.y;
+    coords[4] = (GLfloat)(rect.origin.x + rect.size.width);
+    coords[5] = (GLfloat)(rect.origin.y + rect.size.height);
+    coords[6] = (GLfloat)rect.origin.x;
+    coords[7] = (GLfloat)(rect.origin.y + rect.size.height);
 }
 
 @end

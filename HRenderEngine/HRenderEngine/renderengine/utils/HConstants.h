@@ -23,6 +23,8 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
+#import "HMacros.h"
+
 
 //自定义打印
 #ifdef DEBUG // 处于开发节点
@@ -30,6 +32,8 @@
 #else  // 处于发布节点
 #define HLog(...)
 #endif
+
+
 
 
 #endif

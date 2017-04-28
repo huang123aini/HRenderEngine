@@ -8,12 +8,28 @@
 
 #import "HGLKViewController.h"
 #import "HGLManager.h"
+#import "HCamera.h"
+
+
+
+#import "HScene.h"
+
+
+#import "HSprite.h"
+#import "HSprite3D.h"
+
 
 @interface HGLKViewController ()
 
 @property(nonatomic,strong)EAGLContext* glContext;
 
 @property (nonatomic, assign) CGRect viewport;
+
+@property(nonatomic,strong)HSprite* sprite;
+@property(nonatomic,strong)HSprite* sprite2;
+@property(nonatomic,strong)HSprite3D* sprite3d;
+
+@property(nonatomic,strong)HScene* scene;
 
 @end
 
@@ -69,16 +85,22 @@
     self.avPlayerProgram = [[HAVPlayerProgram alloc] init];
     self.ijkPlayerProgram = [[HIJKPlayerProgram alloc] init];
     
-    self.objectProgram = [[HObjectProgram alloc] init];
+ 
+
+    //生成的场景里元素都在当前上下文中
+    self.scene = [[HScene alloc] initWithContext:self.glContext];
     
-    self.objectTexture = [[HTexture alloc] init];
-    [self.objectTexture setupTextureWithImage:[UIImage imageNamed:@"6.jpg"] TextureFilter:H_LINEAR];
+    _sprite3d = [[HSprite3D alloc] initWithImage:[UIImage imageNamed:@"6.jpg"]];
+    [self.scene addChild:_sprite3d];
     
+
     
+    _sprite = [[HSprite alloc] initWithImage:[UIImage imageNamed:@"zebra.png"]];
     
-    self.normalModel = [[HGLNormalModel alloc] init];
-    self.vrModel = [[HGLVRModel alloc] init];
+    [_sprite setSpriteRect:HRectMake(1.0, 1.0)];
     
+     [self.scene addChild:_sprite];
+
     self.vrMatrix = [[HCameraMatrix alloc] init];
 }
 
@@ -90,7 +112,10 @@
 
 -(void)update
 {
-
+   // [_sprite update:self.timeSinceLastUpdate];
+    
+    [self.scene update:self.timeSinceLastUpdate];
+  
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -112,52 +137,48 @@
     
     
     //2.
+    
+
     {
+        GLKMatrix4 leftMatrix;
         GLfloat scale = [UIScreen mainScreen].scale;
         CGRect  rect = CGRectMake(0, 0,self.viewport.size.width * scale , self.viewport.size.height * scale);
         
-       // [self.vrModel setupGLData:self.ijkPlayerProgram];
-        
-        [self.objectProgram useProgram];
-        [self.objectProgram bindAttributesAndUniforms];
-        
-        [self.vrModel setupGLData:self.objectProgram];
-        
-         [self.objectTexture bindTexture];
-        
-        
-        GLKMatrix4 leftMatrix;
         GLKMatrix4 rightMatrix;
         BOOL success = [self.vrMatrix doubleMatrixWithSize:rect.size leftMatrix:&leftMatrix rightMatrix:&rightMatrix];
         
+
         if (success)
         {
             glViewport(rect.origin.x, rect.origin.y, CGRectGetWidth(rect)/2, CGRectGetHeight(rect));
-            [self.objectProgram updateMVPMatrix:leftMatrix];
-            glDrawElements(GL_TRIANGLES, self.vrModel.indexCount, GL_UNSIGNED_SHORT, 0);
+            
+            [self.scene draw:leftMatrix];
+          
             
             glViewport(CGRectGetWidth(rect)/2 + rect.origin.x, rect.origin.y, CGRectGetWidth(rect)/2, CGRectGetHeight(rect));
-            [self.objectProgram updateMVPMatrix:rightMatrix];
-            glDrawElements(GL_TRIANGLES, self.vrModel.indexCount, GL_UNSIGNED_SHORT, 0);
+            
+            [self.scene draw:rightMatrix];
+            
         }
-
     }
     
+    
+   // [self.scene draw];
     
     //draw normal object
     {
         
-        [self.objectProgram useProgram];
-        [self.objectProgram bindAttributesAndUniforms];
-        [self.normalModel setupGLData:self.objectProgram];
-        
-        [self.objectTexture bindTexture];
-        
-        [self.objectProgram updateMVPMatrix:GLKMatrix4Identity];
-        glDrawElements(GL_TRIANGLES, self.normalModel.indexCount, GL_UNSIGNED_SHORT, 0);
+//        [self.objectProgram useProgram];
+//        [self.objectProgram bindAttributesAndUniforms];
+//        [self.normalModel setupGLData:self.objectProgram];
+//        
+//        [self.objectTexture bindTexture];
+//        
+//        [self.objectProgram updateMVPMatrix:GLKMatrix4Identity];
+//        glDrawElements(GL_TRIANGLES, self.normalModel.indexCount, GL_UNSIGNED_SHORT, 0);
     }
     
-    
+
     
     //3.DRAW  FBO
     
@@ -165,11 +186,13 @@
 }
 
 #pragma mark 强制横屏
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
     return (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
     return UIInterfaceOrientationMaskLandscapeRight;
 }
 

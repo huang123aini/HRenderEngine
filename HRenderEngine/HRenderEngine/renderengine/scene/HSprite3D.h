@@ -10,4 +10,6 @@
 
 @interface HSprite3D : HRenderObject
 
+-(instancetype)initWithImage:(UIImage*)image;
+
 @end

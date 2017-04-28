@@ -8,6 +8,8 @@
 
 #import "HCameraMatrix.h"
 #import "HSensors.h"
+#import "HCamera.h"
+
 
 @interface HCameraMatrix()
 
@@ -45,6 +47,20 @@
     modelViewMatrix = GLKMatrix4RotateY(modelViewMatrix, fingerRotation.y);
     
     float aspect = fabs(size.width / size.height);
+    
+//    //摄像机类暂时提取出来
+//    
+//    float aspect = fabs(size.width / size.height);
+//    HCamera* camera = [[HCamera alloc] initWithFov:[HFingerRotation degress] aspect:aspect near:0.1f far:400.f];
+//    
+//    camera.aspect = aspect;
+//    camera.fov = [HFingerRotation degress];
+//    camera.near = 0.1f;
+//    camera.far = 400.f;
+    
+    
+    
+    
     GLKMatrix4 mvpMatrix = GLKMatrix4Identity;
     
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians([HFingerRotation degress]), aspect, 0.1f, 400.0f);
@@ -64,11 +80,24 @@
     if (!self.sensors.isReady) return NO;
     
     GLKMatrix4 modelViewMatrix = self.sensors.modelView;
+    
 
     float aspect = fabs(size.width / 2 / size.height);
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians([HFingerRotation degress]), aspect, 0.1f, 400.0f);
     
     CGFloat distance = 0.012;
+    
+    
+    
+//    //摄像机类暂时提取出来
+//    HCamera* camera = [[HCamera alloc] initWithFov:[HFingerRotation degress] aspect:aspect near:0.1f far:400.f];
+//    
+//    camera.aspect = aspect;
+//    camera.fov = [HFingerRotation degress];
+//    camera.near = 0.1f;
+//    camera.far = 400.f;
+//    
+
     
     GLKMatrix4 leftViewMatrix  = GLKMatrix4MakeLookAt(-distance, 0, 0.0, 0, 0, -1000, 0, 1, 0);
     GLKMatrix4 rightViewMatrix = GLKMatrix4MakeLookAt(distance, 0, 0.0, 0, 0, -1000, 0, 1, 0);

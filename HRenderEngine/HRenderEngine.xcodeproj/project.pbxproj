@@ -24,10 +24,6 @@
 		FF1276651EA738CC00985047 /* HGLNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276641EA738CC00985047 /* HGLNormalModel.m */; };
 		FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276671EA7391B00985047 /* HGLVRModel.m */; };
 		FF12766A1EA73FDB00985047 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1276691EA73FDB00985047 /* 6.jpg */; };
-		FF1276741EA74F9200985047 /* HRect.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276731EA74F9200985047 /* HRect.m */; };
-		FF1276771EA74FB300985047 /* HSize.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276761EA74FB300985047 /* HSize.m */; };
-		FF12767A1EA7528B00985047 /* HSpriteFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276791EA7528B00985047 /* HSpriteFrame.m */; };
-		FF12767D1EA7535200985047 /* HMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12767C1EA7535200985047 /* HMathUtils.m */; };
 		FF1276801EA7570D00985047 /* HGLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12767F1EA7570D00985047 /* HGLManager.m */; };
 		FF1276841EA7706500985047 /* HDownLoadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276831EA7706500985047 /* HDownLoadUtils.m */; };
 		FF1276871EA7725300985047 /* HFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276861EA7725300985047 /* HFileTools.m */; };
@@ -49,6 +45,20 @@
 		FF152AFD1EA4D7E000BA2B1B /* HDistortionRender.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */; };
 		FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */; };
 		FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */; };
+		FF9613D71EA9D9D800307FAC /* shapeColorShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF9613D51EA9D9D800307FAC /* shapeColorShader.fsh */; };
+		FF9613D81EA9D9D800307FAC /* shapeColorShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF9613D61EA9D9D800307FAC /* shapeColorShader.vsh */; };
+		FF9613DB1EA9DC1200307FAC /* HShapeColorProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9613DA1EA9DC1200307FAC /* HShapeColorProgram.m */; };
+		FF9613E21EAA0AC400307FAC /* HMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9613E11EAA0AC400307FAC /* HMathUtils.m */; };
+		FF9D2D931EA85C75002CD9E4 /* HCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9D2D8E1EA85C75002CD9E4 /* HCamera.m */; };
+		FF9D2D961EA85EB8002CD9E4 /* HScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9D2D951EA85EB8002CD9E4 /* HScene.m */; };
+		FFAF4A3B1EB0AC9300188639 /* lemur.png in Resources */ = {isa = PBXBuildFile; fileRef = FFAF4A3A1EB0AC9300188639 /* lemur.png */; };
+		FFAF4AD61EB3099500188639 /* HGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4AD51EB3099500188639 /* HGeometry.m */; };
+		FFAF4AD91EB319E200188639 /* HRectangleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4AD81EB319E200188639 /* HRectangleModel.m */; };
+		FFE129BF1EAD968C009B4B22 /* HSpriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE129BE1EAD968C009B4B22 /* HSpriteModel.m */; };
+		FFE129C11EADCD7F009B4B22 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE129C01EADCD7F009B4B22 /* zebra.png */; };
+		FFE129C41EADF66F009B4B22 /* HSpriteProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */; };
+		FFE129C71EADF6E3009B4B22 /* spriteShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FFE129C51EADF6E3009B4B22 /* spriteShader.fsh */; };
+		FFE129C81EADF6E3009B4B22 /* spriteShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FFE129C61EADF6E3009B4B22 /* spriteShader.vsh */; };
 		FFE44C951EA4737600A4D95A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE44C941EA4737600A4D95A /* main.m */; };
 		FFE44C981EA4737600A4D95A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE44C971EA4737600A4D95A /* AppDelegate.m */; };
 		FFE44C9B1EA4737600A4D95A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE44C9A1EA4737600A4D95A /* ViewController.m */; };
@@ -85,14 +95,6 @@
 		FF1276661EA7391B00985047 /* HGLVRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLVRModel.h; sourceTree = "<group>"; };
 		FF1276671EA7391B00985047 /* HGLVRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLVRModel.m; sourceTree = "<group>"; };
 		FF1276691EA73FDB00985047 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = ../shaders/6.jpg; sourceTree = "<group>"; };
-		FF1276721EA74F9200985047 /* HRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRect.h; sourceTree = "<group>"; };
-		FF1276731EA74F9200985047 /* HRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRect.m; sourceTree = "<group>"; };
-		FF1276751EA74FB300985047 /* HSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSize.h; sourceTree = "<group>"; };
-		FF1276761EA74FB300985047 /* HSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSize.m; sourceTree = "<group>"; };
-		FF1276781EA7528B00985047 /* HSpriteFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSpriteFrame.h; sourceTree = "<group>"; };
-		FF1276791EA7528B00985047 /* HSpriteFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSpriteFrame.m; sourceTree = "<group>"; };
-		FF12767B1EA7535200985047 /* HMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMathUtils.h; sourceTree = "<group>"; };
-		FF12767C1EA7535200985047 /* HMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMathUtils.m; sourceTree = "<group>"; };
 		FF12767E1EA7570D00985047 /* HGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLManager.h; sourceTree = "<group>"; };
 		FF12767F1EA7570D00985047 /* HGLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLManager.m; sourceTree = "<group>"; };
 		FF1276821EA7706500985047 /* HDownLoadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDownLoadUtils.h; sourceTree = "<group>"; };
@@ -133,6 +135,29 @@
 		FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionRender.m; sourceTree = "<group>"; };
 		FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.vsh; sourceTree = "<group>"; };
 		FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.fsh; sourceTree = "<group>"; };
+		FF45FB471EA8B29100E9F2A6 /* HVertexMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HVertexMacros.h; sourceTree = "<group>"; };
+		FF9613D51EA9D9D800307FAC /* shapeColorShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shapeColorShader.fsh; sourceTree = "<group>"; };
+		FF9613D61EA9D9D800307FAC /* shapeColorShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shapeColorShader.vsh; sourceTree = "<group>"; };
+		FF9613D91EA9DC1200307FAC /* HShapeColorProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HShapeColorProgram.h; sourceTree = "<group>"; };
+		FF9613DA1EA9DC1200307FAC /* HShapeColorProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HShapeColorProgram.m; sourceTree = "<group>"; };
+		FF9613E01EAA0AC400307FAC /* HMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMathUtils.h; sourceTree = "<group>"; };
+		FF9613E11EAA0AC400307FAC /* HMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMathUtils.m; sourceTree = "<group>"; };
+		FF9D2D8D1EA85C75002CD9E4 /* HCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCamera.h; sourceTree = "<group>"; };
+		FF9D2D8E1EA85C75002CD9E4 /* HCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCamera.m; sourceTree = "<group>"; };
+		FF9D2D941EA85EB8002CD9E4 /* HScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HScene.h; sourceTree = "<group>"; };
+		FF9D2D951EA85EB8002CD9E4 /* HScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HScene.m; sourceTree = "<group>"; };
+		FFAF4A3A1EB0AC9300188639 /* lemur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lemur.png; sourceTree = "<group>"; };
+		FFAF4AD41EB3099500188639 /* HGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGeometry.h; sourceTree = "<group>"; };
+		FFAF4AD51EB3099500188639 /* HGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGeometry.m; sourceTree = "<group>"; };
+		FFAF4AD71EB319E200188639 /* HRectangleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRectangleModel.h; sourceTree = "<group>"; };
+		FFAF4AD81EB319E200188639 /* HRectangleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRectangleModel.m; sourceTree = "<group>"; };
+		FFE129BD1EAD968C009B4B22 /* HSpriteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSpriteModel.h; sourceTree = "<group>"; };
+		FFE129BE1EAD968C009B4B22 /* HSpriteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSpriteModel.m; sourceTree = "<group>"; };
+		FFE129C01EADCD7F009B4B22 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
+		FFE129C21EADF66F009B4B22 /* HSpriteProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSpriteProgram.h; sourceTree = "<group>"; };
+		FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSpriteProgram.m; sourceTree = "<group>"; };
+		FFE129C51EADF6E3009B4B22 /* spriteShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = spriteShader.fsh; sourceTree = "<group>"; };
+		FFE129C61EADF6E3009B4B22 /* spriteShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = spriteShader.vsh; sourceTree = "<group>"; };
 		FFE44C901EA4737600A4D95A /* HRenderEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRenderEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE44C941EA4737600A4D95A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FFE44C961EA4737600A4D95A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +191,10 @@
 				FF152ACD1EA49FEA00BA2B1B /* HProgram.m */,
 				FF1275EA1EA5B87F00985047 /* HObjectProgram.h */,
 				FF1275EB1EA5B87F00985047 /* HObjectProgram.m */,
+				FFE129C21EADF66F009B4B22 /* HSpriteProgram.h */,
+				FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */,
+				FF9613D91EA9DC1200307FAC /* HShapeColorProgram.h */,
+				FF9613DA1EA9DC1200307FAC /* HShapeColorProgram.m */,
 				FF1275F21EA5BCAD00985047 /* HAVPlayerProgram.h */,
 				FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */,
 				FF1275FD1EA5C2CB00985047 /* HIJKPlayerProgram.h */,
@@ -189,27 +218,18 @@
 		FF12766B1EA73FE400985047 /* testResources */ = {
 			isa = PBXGroup;
 			children = (
+				FFAF4A3A1EB0AC9300188639 /* lemur.png */,
+				FFE129C01EADCD7F009B4B22 /* zebra.png */,
 				FF1276691EA73FDB00985047 /* 6.jpg */,
 			);
 			name = testResources;
 			sourceTree = "<group>";
 		};
-		FF1276701EA74F1100985047 /* sprite */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = sprite;
-			sourceTree = "<group>";
-		};
 		FF1276711EA74F6700985047 /* math */ = {
 			isa = PBXGroup;
 			children = (
-				FF1276721EA74F9200985047 /* HRect.h */,
-				FF1276731EA74F9200985047 /* HRect.m */,
-				FF1276751EA74FB300985047 /* HSize.h */,
-				FF1276761EA74FB300985047 /* HSize.m */,
-				FF1276781EA7528B00985047 /* HSpriteFrame.h */,
-				FF1276791EA7528B00985047 /* HSpriteFrame.m */,
+				FF9613E01EAA0AC400307FAC /* HMathUtils.h */,
+				FF9613E11EAA0AC400307FAC /* HMathUtils.m */,
 			);
 			name = math;
 			sourceTree = "<group>";
@@ -228,6 +248,7 @@
 		FF152AB41EA49B8200BA2B1B /* renderengine */ = {
 			isa = PBXGroup;
 			children = (
+				FF9D2D841EA85C62002CD9E4 /* collision */,
 				FF1276591EA7160300985047 /* testDemo */,
 				FF1275ED1EA5B8AF00985047 /* program */,
 				FF152AFE1EA4DA8E00BA2B1B /* shaders */,
@@ -245,6 +266,8 @@
 		FF152AB51EA49B8200BA2B1B /* render */ = {
 			isa = PBXGroup;
 			children = (
+				FFAF4AD41EB3099500188639 /* HGeometry.h */,
+				FFAF4AD51EB3099500188639 /* HGeometry.m */,
 			);
 			path = render;
 			sourceTree = "<group>";
@@ -252,6 +275,8 @@
 		FF152AB61EA49B8200BA2B1B /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				FF9D2D941EA85EB8002CD9E4 /* HScene.h */,
+				FF9D2D951EA85EB8002CD9E4 /* HScene.m */,
 				FF152AB81EA49B8F00BA2B1B /* HNode.h */,
 				FF152AB91EA49B8F00BA2B1B /* HNode.m */,
 				FF152AD91EA4A79E00BA2B1B /* HRenderObject.h */,
@@ -269,7 +294,6 @@
 			children = (
 				FF1276811EA7702900985047 /* file */,
 				FF1276711EA74F6700985047 /* math */,
-				FF1276701EA74F1100985047 /* sprite */,
 				FF152AD81EA4A64800BA2B1B /* matrixUtils */,
 				FF152AC21EA49CB400BA2B1B /* Singleton.h */,
 				FF152ABB1EA49BB600BA2B1B /* RenderEngine.pch */,
@@ -277,8 +301,6 @@
 				FF152AD11EA4A2F200BA2B1B /* HMacros.h */,
 				FF152AD21EA4A32900BA2B1B /* GLUtils.h */,
 				FF152AD31EA4A32900BA2B1B /* GLUtils.m */,
-				FF12767B1EA7535200985047 /* HMathUtils.h */,
-				FF12767C1EA7535200985047 /* HMathUtils.m */,
 				FF12767E1EA7570D00985047 /* HGLManager.h */,
 				FF12767F1EA7570D00985047 /* HGLManager.m */,
 			);
@@ -309,12 +331,17 @@
 		FF152AC81EA49F9F00BA2B1B /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FF45FB461EA8B26100E9F2A6 /* cameraShape */,
 				FF1276601EA7386A00985047 /* HGLModel.h */,
 				FF1276611EA7386A00985047 /* HGLModel.m */,
+				FFAF4AD71EB319E200188639 /* HRectangleModel.h */,
+				FFAF4AD81EB319E200188639 /* HRectangleModel.m */,
 				FF1276631EA738CC00985047 /* HGLNormalModel.h */,
 				FF1276641EA738CC00985047 /* HGLNormalModel.m */,
 				FF1276661EA7391B00985047 /* HGLVRModel.h */,
 				FF1276671EA7391B00985047 /* HGLVRModel.m */,
+				FFE129BD1EAD968C009B4B22 /* HSpriteModel.h */,
+				FFE129BE1EAD968C009B4B22 /* HSpriteModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -346,8 +373,28 @@
 		FF152AFE1EA4DA8E00BA2B1B /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				FF9613D41EA9D9A800307FAC /* baseShader */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		FF45FB461EA8B26100E9F2A6 /* cameraShape */ = {
+			isa = PBXGroup;
+			children = (
+				FF45FB471EA8B29100E9F2A6 /* HVertexMacros.h */,
+			);
+			name = cameraShape;
+			sourceTree = "<group>";
+		};
+		FF9613D41EA9D9A800307FAC /* baseShader */ = {
+			isa = PBXGroup;
+			children = (
+				FF9613D61EA9D9D800307FAC /* shapeColorShader.vsh */,
+				FF9613D51EA9D9D800307FAC /* shapeColorShader.fsh */,
 				FF1275EE1EA5BBEB00985047 /* objectShader.vsh */,
 				FF1275EF1EA5BBEB00985047 /* objectShader.fsh */,
+				FFE129C61EADF6E3009B4B22 /* spriteShader.vsh */,
+				FFE129C51EADF6E3009B4B22 /* spriteShader.fsh */,
 				FF1275F61EA5BCE300985047 /* avplayerShader.vsh */,
 				FF1275F51EA5BCE300985047 /* avplayerShader.fsh */,
 				FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */,
@@ -355,7 +402,16 @@
 				FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */,
 				FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */,
 			);
-			path = shaders;
+			name = baseShader;
+			sourceTree = "<group>";
+		};
+		FF9D2D841EA85C62002CD9E4 /* collision */ = {
+			isa = PBXGroup;
+			children = (
+				FF9D2D8D1EA85C75002CD9E4 /* HCamera.h */,
+				FF9D2D8E1EA85C75002CD9E4 /* HCamera.m */,
+			);
+			path = collision;
 			sourceTree = "<group>";
 		};
 		FFE44C871EA4737600A4D95A = {
@@ -461,11 +517,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE129C11EADCD7F009B4B22 /* zebra.png in Resources */,
+				FFE129C71EADF6E3009B4B22 /* spriteShader.fsh in Resources */,
 				FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */,
 				FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */,
+				FFAF4A3B1EB0AC9300188639 /* lemur.png in Resources */,
 				FF12766A1EA73FDB00985047 /* 6.jpg in Resources */,
 				FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */,
+				FF9613D71EA9D9D800307FAC /* shapeColorShader.fsh in Resources */,
 				FF152AD01EA4A1B500BA2B1B /* ReadMe in Resources */,
+				FFE129C81EADF6E3009B4B22 /* spriteShader.vsh in Resources */,
 				FFE44CA31EA4737600A4D95A /* LaunchScreen.storyboard in Resources */,
 				FFE44CA01EA4737600A4D95A /* Assets.xcassets in Resources */,
 				FF1275F91EA5BCE300985047 /* avplayerShader.fsh in Resources */,
@@ -474,6 +535,7 @@
 				FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */,
 				FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */,
 				FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */,
+				FF9613D81EA9D9D800307FAC /* shapeColorShader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +552,7 @@
 				FF1276571EA704F600985047 /* HVideoTexture.m in Sources */,
 				FF152ABA1EA49B8F00BA2B1B /* HNode.m in Sources */,
 				FF1276651EA738CC00985047 /* HGLNormalModel.m in Sources */,
+				FFAF4AD91EB319E200188639 /* HRectangleModel.m in Sources */,
 				FF1275FF1EA5C2CB00985047 /* HIJKPlayerProgram.m in Sources */,
 				FF1276621EA7386A00985047 /* HGLModel.m in Sources */,
 				FF152AED1EA4C84500BA2B1B /* HCameraMatrix.m in Sources */,
@@ -497,13 +560,14 @@
 				FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */,
 				FFE44C981EA4737600A4D95A /* AppDelegate.m in Sources */,
 				FFE44C951EA4737600A4D95A /* main.m in Sources */,
-				FF1276771EA74FB300985047 /* HSize.m in Sources */,
 				FF152AE11EA4A8C400BA2B1B /* HSprite3D.m in Sources */,
+				FF9613DB1EA9DC1200307FAC /* HShapeColorProgram.m in Sources */,
 				FF12765C1EA7165900985047 /* HDemosVc.m in Sources */,
 				FF152AFD1EA4D7E000BA2B1B /* HDistortionRender.m in Sources */,
-				FF12767D1EA7535200985047 /* HMathUtils.m in Sources */,
+				FF9D2D931EA85C75002CD9E4 /* HCamera.m in Sources */,
+				FF9D2D961EA85EB8002CD9E4 /* HScene.m in Sources */,
+				FFE129C41EADF66F009B4B22 /* HSpriteProgram.m in Sources */,
 				FF152ADB1EA4A79E00BA2B1B /* HRenderObject.m in Sources */,
-				FF1276741EA74F9200985047 /* HRect.m in Sources */,
 				FF152ACE1EA49FEA00BA2B1B /* HProgram.m in Sources */,
 				FF1276841EA7706500985047 /* HDownLoadUtils.m in Sources */,
 				FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */,
@@ -514,8 +578,10 @@
 				FF152AC61EA49F2B00BA2B1B /* HTexture.m in Sources */,
 				FF152ADE1EA4A88F00BA2B1B /* HSprite.m in Sources */,
 				FF152AF31EA4C92900BA2B1B /* HFingerRotation.m in Sources */,
+				FFAF4AD61EB3099500188639 /* HGeometry.m in Sources */,
+				FFE129BF1EAD968C009B4B22 /* HSpriteModel.m in Sources */,
+				FF9613E21EAA0AC400307FAC /* HMathUtils.m in Sources */,
 				FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */,
-				FF12767A1EA7528B00985047 /* HSpriteFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

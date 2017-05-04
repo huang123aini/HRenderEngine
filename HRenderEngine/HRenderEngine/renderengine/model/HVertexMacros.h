@@ -47,4 +47,31 @@ typedef struct
     GLfloat Normal[3];
 } VertexTextureNorm;
 
+
+
+#pragma mark  -----obj-----
+typedef struct
+{
+    GLfloat position[3];
+    GLfloat normal[3];
+    GLfloat uv[2];
+} OBJVertex;
+
+typedef struct
+{
+    char matName[256];
+    GLushort * triIndices;
+    int idxNum;
+} OBJSubObjData;
+
+typedef struct
+{
+    char matFilename[256];
+    OBJVertex* vertices;
+    int vertexNum;
+    OBJSubObjData * subObjects;
+    int objNum;
+}OBJModelData;
+
+
 #endif /* HVertexMacros_h */

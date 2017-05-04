@@ -17,6 +17,8 @@
 #import "HCubeT.h"
 
 #import "HCubeNorm.h"
+#import "HOBJNode.h"
+
 
 #import "HSpriteProgram.h"
 
@@ -32,10 +34,11 @@
 @property (nonatomic, assign) CGRect viewport;
 
 @property(nonatomic,strong)HSprite* sprite;
-
 @property(nonatomic,strong)HCubeT* cube;
-
 @property(nonatomic,strong)HCubeNorm* cubeNorm;
+@property(nonatomic,strong)HOBJNode* objNode;
+
+
 
 @property(nonatomic,strong)HSprite3D* sprite3d;
 
@@ -120,6 +123,11 @@
       [self.scene addChild:_sprite];
     
     
+    _objNode = [[HOBJNode alloc] initWithOBJFile:@"pyramid"];
+    _objNode.scale = GLKVector3Make(0.05, 0.05, 0.05);
+    
+    _objNode.position =GLKVector3Make(1,-1,0);
+    [self.scene addChild:_objNode];
     
 
     self.vrMatrix = [[HCameraMatrix alloc] init];

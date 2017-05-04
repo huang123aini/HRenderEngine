@@ -16,6 +16,8 @@
     unsigned int  _indexCount;
     unsigned int  _vertexCount;
     HBaseEffect*  _shader;
+    OBJModelData* _objData;
+    
     enum PrimitiveType
     {
         TriangleList,TriangleStrip,Triangles
@@ -35,6 +37,7 @@
         _vertexCount = vertexCount;
         _indexCount = indexCount;
         _shader = shader;
+        _isObj = NO;
       
         glGenVertexArraysOES(1, &_verticesArrayBuffer);
         glBindVertexArrayOES(_verticesArrayBuffer);
@@ -70,6 +73,7 @@
         _vertexCount = vertexCount;
         _indexCount = indexCount;
         _shader = shader;
+        _isObj = NO;
         
         glGenVertexArraysOES(1, &_verticesArrayBuffer);
         glBindVertexArrayOES(_verticesArrayBuffer);
@@ -103,6 +107,42 @@
 }
 
 
+-(instancetype)initWithShader:(HBaseEffect*)shader objData:(OBJModelData*)data
+{
+    
+    if (self = [super init])
+    {
+        _shader = shader;
+        _isObj = YES;
+        _objData = data;
+        
+        glGenVertexArraysOES(1, &_verticesArrayBuffer);
+        glBindVertexArrayOES(_verticesArrayBuffer);
+        
+        
+        glGenBuffers(1, &_vertexBuffer);
+        glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(OBJVertex) * _objData->vertexNum, _objData->vertices, GL_STATIC_DRAW);
+        
+        glEnableVertexAttribArray(GLKVertexAttribPosition);
+        glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(OBJVertex), (GLvoid*)offsetof(OBJVertex, position));
+        
+        glEnableVertexAttribArray(GLKVertexAttribColor);
+        glVertexAttribPointer(GLKVertexAttribColor, 3, GL_FLOAT, GL_FALSE, sizeof(OBJVertex), (GLvoid*)offsetof(OBJVertex, normal));
+        
+        glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
+        glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_TRUE, sizeof(OBJVertex), (GLvoid*)offsetof(OBJVertex, uv));
+        
+        glBindVertexArrayOES(0);
+        glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
+        
+        _primitiveType = TriangleList;
+    }
+    
+    return self;
+}
+
 
 -(instancetype)initWithShader:(HBaseEffect*)shader vertices:(VertexColor*)vertices vertexCount:(unsigned int)vertexCount
 {
@@ -111,6 +151,8 @@
     
         _vertexCount = vertexCount;
         _shader = shader;
+        _isObj = NO;
+        
        
        
         glGenVertexArraysOES(1, &_verticesArrayBuffer);
@@ -142,6 +184,7 @@
         
         _vertexCount = vertexCount;
         _shader = shader;
+        _isObj = NO;
     
         glGenVertexArraysOES(1, &_verticesArrayBuffer);
         glBindVertexArrayOES(_verticesArrayBuffer);
@@ -180,6 +223,7 @@
         _vertexCount = vertexCount;
         _indexCount = indexCount;
         _shader = shader;
+        _isObj = NO;
        
         glGenVertexArraysOES(1, &_verticesArrayBuffer);
         glBindVertexArrayOES(_verticesArrayBuffer);
@@ -215,6 +259,7 @@
         _vertexCount = vertexCount;
         _indexCount = indexCount;
         _shader = shader;
+        _isObj = NO;
         
         glGenVertexArraysOES(1, &_verticesArrayBuffer);
         glBindVertexArrayOES(_verticesArrayBuffer);
@@ -256,7 +301,6 @@
     modelMatrix = GLKMatrix4Rotate(modelMatrix, self.rotationY, 0, 1, 0);
     modelMatrix = GLKMatrix4Rotate(modelMatrix, self.rotationZ, 0, 0, 1);
     
-    
     modelMatrix = GLKMatrix4ScaleWithVector3(modelMatrix, self.scale);
     return modelMatrix;
 }
@@ -270,10 +314,23 @@
     
     
     glBindVertexArrayOES(_verticesArrayBuffer);
+    
     switch (_primitiveType)
     {
         case TriangleList:
-            glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_BYTE, 0);
+            if (!_isObj)
+            {
+                //not obj
+                glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_BYTE, 0);
+            }else
+            {
+                //is obj
+                for (int i = 0; i < _objData->objNum; ++i)
+                {
+                    glDrawElements(GL_TRIANGLES, _objData->subObjects[i].idxNum, GL_UNSIGNED_SHORT, _objData->subObjects[i].triIndices);
+                }
+            }
+            
             break;
         case TriangleStrip:
             glDrawArrays(GL_TRIANGLE_STRIP, 0, _vertexCount);
@@ -284,6 +341,7 @@
         default:
             break;
     }
+    
     glBindVertexArrayOES(0);
     
 }

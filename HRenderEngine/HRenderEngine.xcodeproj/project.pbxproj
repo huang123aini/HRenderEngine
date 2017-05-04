@@ -53,6 +53,14 @@
 		FFAF4B591EB9A2A300188639 /* HBaseEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4B581EB9A2A300188639 /* HBaseEffect.m */; };
 		FFAF4B5C1EB9B73600188639 /* HCubeT.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4B5B1EB9B73600188639 /* HCubeT.m */; };
 		FFAF4B661EB9E7F300188639 /* HCubeNorm.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4B651EB9E7F300188639 /* HCubeNorm.m */; };
+		FFD081F01EBACEE700C16B2A /* OBJMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081EF1EBACEE700C16B2A /* OBJMaterial.m */; };
+		FFD081F31EBAD0F100C16B2A /* OBJLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081F21EBAD0F100C16B2A /* OBJLoader.m */; };
+		FFD081F61EBAD12500C16B2A /* OBJLoaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081F51EBAD12500C16B2A /* OBJLoaderUtils.m */; };
+		FFD081F91EBAD5EE00C16B2A /* HOBJNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081F81EBAD5EE00C16B2A /* HOBJNode.m */; };
+		FFD081FB1EBADFB000C16B2A /* complicate.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FA1EBADFB000C16B2A /* complicate.obj */; };
+		FFD081FD1EBAE19200C16B2A /* pyramid.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FC1EBAE19200C16B2A /* pyramid.obj */; };
+		FFD082001EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FE1EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj */; };
+		FFD082011EBAF5BF00C16B2A /* EyesWhite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */; };
 		FFE129C11EADCD7F009B4B22 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE129C01EADCD7F009B4B22 /* zebra.png */; };
 		FFE129C41EADF66F009B4B22 /* HSpriteProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */; };
 		FFE129C71EADF6E3009B4B22 /* spriteShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FFE129C51EADF6E3009B4B22 /* spriteShader.fsh */; };
@@ -148,6 +156,18 @@
 		FFAF4B5B1EB9B73600188639 /* HCubeT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCubeT.m; sourceTree = "<group>"; };
 		FFAF4B641EB9E7F300188639 /* HCubeNorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCubeNorm.h; sourceTree = "<group>"; };
 		FFAF4B651EB9E7F300188639 /* HCubeNorm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCubeNorm.m; sourceTree = "<group>"; };
+		FFD081EE1EBACEE700C16B2A /* OBJMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJMaterial.h; sourceTree = "<group>"; };
+		FFD081EF1EBACEE700C16B2A /* OBJMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJMaterial.m; sourceTree = "<group>"; };
+		FFD081F11EBAD0F100C16B2A /* OBJLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJLoader.h; sourceTree = "<group>"; };
+		FFD081F21EBAD0F100C16B2A /* OBJLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJLoader.m; sourceTree = "<group>"; };
+		FFD081F41EBAD12500C16B2A /* OBJLoaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJLoaderUtils.h; sourceTree = "<group>"; };
+		FFD081F51EBAD12500C16B2A /* OBJLoaderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJLoaderUtils.m; sourceTree = "<group>"; };
+		FFD081F71EBAD5EE00C16B2A /* HOBJNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HOBJNode.h; sourceTree = "<group>"; };
+		FFD081F81EBAD5EE00C16B2A /* HOBJNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOBJNode.m; sourceTree = "<group>"; };
+		FFD081FA1EBADFB000C16B2A /* complicate.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = complicate.obj; sourceTree = "<group>"; };
+		FFD081FC1EBAE19200C16B2A /* pyramid.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pyramid.obj; sourceTree = "<group>"; };
+		FFD081FE1EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bigmax_White_OBJ.obj; sourceTree = "<group>"; };
+		FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EyesWhite.jpg; sourceTree = "<group>"; };
 		FFE129C01EADCD7F009B4B22 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
 		FFE129C21EADF66F009B4B22 /* HSpriteProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSpriteProgram.h; sourceTree = "<group>"; };
 		FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSpriteProgram.m; sourceTree = "<group>"; };
@@ -213,6 +233,10 @@
 		FF12766B1EA73FE400985047 /* testResources */ = {
 			isa = PBXGroup;
 			children = (
+				FFD081FE1EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj */,
+				FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */,
+				FFD081FA1EBADFB000C16B2A /* complicate.obj */,
+				FFD081FC1EBAE19200C16B2A /* pyramid.obj */,
 				FFAF4B521EB8642B00188639 /* stone.jpg */,
 				FFAF4A3A1EB0AC9300188639 /* lemur.png */,
 				FFE129C01EADCD7F009B4B22 /* zebra.png */,
@@ -269,12 +293,15 @@
 		FF152AB61EA49B8200BA2B1B /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				FFD081ED1EBACEB100C16B2A /* OBJ */,
 				FF9D2D941EA85EB8002CD9E4 /* HScene.h */,
 				FF9D2D951EA85EB8002CD9E4 /* HScene.m */,
 				FF152AB81EA49B8F00BA2B1B /* HNode.h */,
 				FF152AB91EA49B8F00BA2B1B /* HNode.m */,
 				FF152AD91EA4A79E00BA2B1B /* HRenderObject.h */,
 				FF152ADA1EA4A79E00BA2B1B /* HRenderObject.m */,
+				FFD081F71EBAD5EE00C16B2A /* HOBJNode.h */,
+				FFD081F81EBAD5EE00C16B2A /* HOBJNode.m */,
 				FFAF4B541EB89CD700188639 /* HSprite.h */,
 				FFAF4B551EB89CD700188639 /* HSprite.m */,
 				FFAF4B5A1EB9B73600188639 /* HCubeT.h */,
@@ -398,6 +425,19 @@
 			path = collision;
 			sourceTree = "<group>";
 		};
+		FFD081ED1EBACEB100C16B2A /* OBJ */ = {
+			isa = PBXGroup;
+			children = (
+				FFD081EE1EBACEE700C16B2A /* OBJMaterial.h */,
+				FFD081EF1EBACEE700C16B2A /* OBJMaterial.m */,
+				FFD081F11EBAD0F100C16B2A /* OBJLoader.h */,
+				FFD081F21EBAD0F100C16B2A /* OBJLoader.m */,
+				FFD081F41EBAD12500C16B2A /* OBJLoaderUtils.h */,
+				FFD081F51EBAD12500C16B2A /* OBJLoaderUtils.m */,
+			);
+			name = OBJ;
+			sourceTree = "<group>";
+		};
 		FFE44C871EA4737600A4D95A = {
 			isa = PBXGroup;
 			children = (
@@ -503,10 +543,12 @@
 			files = (
 				FFE129C11EADCD7F009B4B22 /* zebra.png in Resources */,
 				FFE129C71EADF6E3009B4B22 /* spriteShader.fsh in Resources */,
+				FFD081FD1EBAE19200C16B2A /* pyramid.obj in Resources */,
 				FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */,
 				FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */,
 				FFAF4B531EB8642B00188639 /* stone.jpg in Resources */,
 				FFAF4A3B1EB0AC9300188639 /* lemur.png in Resources */,
+				FFD082001EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj in Resources */,
 				FF12766A1EA73FDB00985047 /* 6.jpg in Resources */,
 				FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */,
 				FF152AD01EA4A1B500BA2B1B /* ReadMe in Resources */,
@@ -516,8 +558,10 @@
 				FF1275F91EA5BCE300985047 /* avplayerShader.fsh in Resources */,
 				FFE44C9E1EA4737600A4D95A /* Main.storyboard in Resources */,
 				FF1275FB1EA5BCE300985047 /* ijkplayerShader.fsh in Resources */,
+				FFD082011EBAF5BF00C16B2A /* EyesWhite.jpg in Resources */,
 				FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */,
 				FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */,
+				FFD081FB1EBADFB000C16B2A /* complicate.obj in Resources */,
 				FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,9 +583,11 @@
 				FF1276621EA7386A00985047 /* HGLModel.m in Sources */,
 				FF152AED1EA4C84500BA2B1B /* HCameraMatrix.m in Sources */,
 				FFE44C9B1EA4737600A4D95A /* ViewController.m in Sources */,
+				FFD081F31EBAD0F100C16B2A /* OBJLoader.m in Sources */,
 				FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */,
 				FFAF4B661EB9E7F300188639 /* HCubeNorm.m in Sources */,
 				FFE44C981EA4737600A4D95A /* AppDelegate.m in Sources */,
+				FFD081F61EBAD12500C16B2A /* OBJLoaderUtils.m in Sources */,
 				FFE44C951EA4737600A4D95A /* main.m in Sources */,
 				FF152AE11EA4A8C400BA2B1B /* HSprite3D.m in Sources */,
 				FF12765C1EA7165900985047 /* HDemosVc.m in Sources */,
@@ -555,11 +601,13 @@
 				FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */,
 				FF1276801EA7570D00985047 /* HGLManager.m in Sources */,
 				FF1276541EA61CFE00985047 /* HGLKViewController.m in Sources */,
+				FFD081F01EBACEE700C16B2A /* OBJMaterial.m in Sources */,
 				FF1275F41EA5BCAD00985047 /* HAVPlayerProgram.m in Sources */,
 				FF1275EC1EA5B87F00985047 /* HObjectProgram.m in Sources */,
 				FFAF4B5C1EB9B73600188639 /* HCubeT.m in Sources */,
 				FF152AC61EA49F2B00BA2B1B /* HTexture.m in Sources */,
 				FF152AF31EA4C92900BA2B1B /* HFingerRotation.m in Sources */,
+				FFD081F91EBAD5EE00C16B2A /* HOBJNode.m in Sources */,
 				FFAF4B561EB89CD700188639 /* HSprite.m in Sources */,
 				FF9613E21EAA0AC400307FAC /* HMathUtils.m in Sources */,
 				FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */,

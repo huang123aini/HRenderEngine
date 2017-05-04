@@ -2,25 +2,22 @@
 //  HSprite.h
 //  HRenderEngine
 //
-//  Created by 黄世平 on 17/4/17.
+//  Created by 黄世平 on 17/5/2.
 //  Copyright © 2017年 黄世平. All rights reserved.
 //
 
 #import "HRenderObject.h"
 
-
-typedef NS_ENUM(NSUInteger, HGLBlendMode)
-{
-    HGLBlendModeNormal = 0,   // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA
-    HGLBlendModeMultiply,     // GL_DST_COLOR, GL_ONE_MINUS_SRC_ALPHA
-    HGLBlendModeAdd,          // GL_SRC_ALPHA, GL_ONE
-    HGLBlendModeScreen        // GL_SRC_ALPHA, GL_ONE_MINUS_SRC_COLOR
-};
-
 @interface HSprite : HRenderObject
 
--(instancetype)initWithImage:(UIImage*)image;
+-(instancetype)init;
 
--(void)setSpriteRect:(HRect)rect;
+-(instancetype)initWithImage:(UIImage*)image Rect:(HRect)rect;
+
+-(void)setRect:(HRect)rect;
+
+-(instancetype)initWithVerticesColor:(VertexColor *)Vertices verticesSize:(int)VerticesSize;
+
+-(instancetype)initWithVerticesColor:(VertexColor *)Vertices verticesSize:(int)VerticesSize indices:(GLubyte*)indices indicesSize:(int)indicesSize;
 
 @end

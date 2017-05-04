@@ -44,27 +44,6 @@
     [self.model setupGLData:self.program];
 }
 
--(void)draw
-{
-//    if (self.model == nil || self.texture == nil || self.program == nil)
-//    {
-//        return;
-//    }
-//    
-//    [self.program useProgram];
-//    
-//    [self.texture bindTexture];
-//    
-//    [self.program bindAttributesAndUniforms];
-//    
-//    [self.model setupGLData:self.program];
-//    
-//    [self.program updateMVPMatrix:GLKMatrix4Identity];
-//    
-//    glDrawElements(GL_TRIANGLES, self.model.indexCount, GL_UNSIGNED_SHORT, 0);
-//    
-//   
-}
 
 -(void)draw:(GLKMatrix4)projectionMatrix
 {
@@ -85,7 +64,6 @@
     
     glDrawElements(GL_TRIANGLES, self.model.indexCount, GL_UNSIGNED_SHORT, 0);
     
-   
 }
 
 

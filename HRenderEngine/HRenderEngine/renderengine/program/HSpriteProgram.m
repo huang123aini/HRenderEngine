@@ -26,28 +26,30 @@
         //4.
         [self bindAttributesAndUniforms];
         
-        return self;
-    }else
-    {
-        return nil;
+       
     }
+    return self;
 }
 
 -(void)setupAttributesAndUniforms
 {
     self.aPosition = glGetAttribLocation(self.program, "aPosition");
     self.aTexCoord = glGetAttribLocation(self.program, "aTexCoord");
+    self.aNormal   = glGetAttribLocation(self.program, "aNormal");
+    self.aColor    = glGetAttribLocation(self.program, "aColor");
     
-  
     self.uModelViewProjectionMatrix = glGetUniformLocation(self.program, "uModelViewProjectionMatrix");
-    
     self.uSampler = glGetUniformLocation(self.program, "uSampler");
+
+
 }
 
 -(void)bindAttributesAndUniforms
 {
     glEnableVertexAttribArray(self.aPosition);
     glEnableVertexAttribArray(self.aTexCoord);
+    glEnableVertexAttribArray(self.aNormal);
+    glEnableVertexAttribArray(self.aColor);
   
     glUniform1i(self.uSampler, 0);
 }

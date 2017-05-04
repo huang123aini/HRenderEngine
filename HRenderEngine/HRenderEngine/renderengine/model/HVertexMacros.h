@@ -11,39 +11,40 @@
 
 #import <OpenGLES/ES2/gl.h>
 
-struct Vertex
+
+
+typedef struct 
 {
-    //vertices
-    GLKVector3 position;
+    GLfloat Position[3];
+}Vertex;
 
-    //texture coordinates
-    GLKVector2 texture;
-    
-    //normals
-    GLKVector3 normal;
-    
-    //color
-    GLKVector4 color;
-    
-};
-typedef struct Vertex HVertex;
-
-struct FaceIndices
+typedef struct
 {
-    //vertex indices
-    GLushort a;
-    GLushort b;
-    GLushort c;
-};
-typedef struct FaceIndices HFaceIndices;
+    GLfloat Position[3];
+    GLfloat Color[4];
+} VertexColor;
 
-struct LineIndices
+typedef struct
 {
-    //vertex indices
-    GLushort a;
-    GLushort b;
-};
-typedef struct LineIndices HLineIndices;
+    GLfloat Position[3];
+    GLfloat Color[4];
+    GLfloat TextureCoordinate[2];
+} VertexTexture;
 
+
+typedef struct
+{
+    GLfloat Position[3];
+    GLfloat TextureCoordinate[2];
+    
+}VertexTexCoord;
+
+typedef struct
+{
+    GLfloat Position[3];
+    GLfloat Color[4];
+    GLfloat TextureCoordinate[2];
+    GLfloat Normal[3];
+} VertexTextureNorm;
 
 #endif /* HVertexMacros_h */

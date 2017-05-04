@@ -86,7 +86,7 @@ void swapt(float* width, float *height)
     // Create and compile vertex shader.
     if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:shaderVertex])
     {
-        HLog(@"Failed to compile vertex shader");
+        HLog(@"Failed to compile vertex shader :Shader Name is:%@",shaderVertex);
         return NO;
     }
     

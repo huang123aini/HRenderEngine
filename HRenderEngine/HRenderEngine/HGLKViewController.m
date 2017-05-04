@@ -9,24 +9,34 @@
 #import "HGLKViewController.h"
 #import "HGLManager.h"
 #import "HCamera.h"
-
-
-
 #import "HScene.h"
 
 
 #import "HSprite.h"
 #import "HSprite3D.h"
+#import "HCubeT.h"
 
+#import "HCubeNorm.h"
+
+#import "HSpriteProgram.h"
 
 @interface HGLKViewController ()
+{
+ HBaseEffect *_shader;
+    
+ HBaseEffect* _shader2;
+}
 
 @property(nonatomic,strong)EAGLContext* glContext;
 
 @property (nonatomic, assign) CGRect viewport;
 
 @property(nonatomic,strong)HSprite* sprite;
-@property(nonatomic,strong)HSprite* sprite2;
+
+@property(nonatomic,strong)HCubeT* cube;
+
+@property(nonatomic,strong)HCubeNorm* cubeNorm;
+
 @property(nonatomic,strong)HSprite3D* sprite3d;
 
 @property(nonatomic,strong)HScene* scene;
@@ -89,17 +99,28 @@
 
     //生成的场景里元素都在当前上下文中
     self.scene = [[HScene alloc] initWithContext:self.glContext];
-    
+//    
     _sprite3d = [[HSprite3D alloc] initWithImage:[UIImage imageNamed:@"6.jpg"]];
     [self.scene addChild:_sprite3d];
+   
+//    _cube = [[HCubeT alloc] init];
+//    _cube.scale = GLKVector3Make(0.5, 0.5, 0.5);
+//    [self.scene addChild:_cube];
+//    
     
-
+    _cubeNorm = [[HCubeNorm alloc] init];
+    _cubeNorm.scale = GLKVector3Make(0.5, 0.5, 0.5);
+    [self.scene addChild:_cubeNorm];
     
-    _sprite = [[HSprite alloc] initWithImage:[UIImage imageNamed:@"zebra.png"]];
     
-    [_sprite setSpriteRect:HRectMake(1.0, 1.0)];
     
-     [self.scene addChild:_sprite];
+      _sprite = [[HSprite alloc] initWithImage:[UIImage imageNamed:@"6.jpg"] Rect:HRectMake(0.5, 0.5)];
+    
+      _sprite.scale = GLKVector3Make(0.2, 0.2, 1);
+      [self.scene addChild:_sprite];
+    
+    
+    
 
     self.vrMatrix = [[HCameraMatrix alloc] init];
 }
@@ -112,8 +133,7 @@
 
 -(void)update
 {
-   // [_sprite update:self.timeSinceLastUpdate];
-    
+   
     [self.scene update:self.timeSinceLastUpdate];
   
 }
@@ -129,6 +149,12 @@
     
     glClearColor(0, 0, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT);
+    
+//    glEnable(GL_DEPTH_TEST);
+//    glEnable(GL_CULL_FACE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//    
     
     
     //1.bind fbo

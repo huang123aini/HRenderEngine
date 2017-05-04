@@ -21,6 +21,11 @@
 @property(nonatomic,assign)GLKVector3 rotation;
 @property(nonatomic,assign)GLKVector3 scale;
 
+@property(nonatomic,assign)float      rotationX;
+@property(nonatomic,assign)float      rotationY;
+@property(nonatomic,assign)float      rotationZ;
+
+
 @property(nonatomic,assign)BOOL       isVisible;
 @property(nonatomic,strong)HNode*     parent; //父节点
 @property(nonatomic,strong)NSMutableArray* children;

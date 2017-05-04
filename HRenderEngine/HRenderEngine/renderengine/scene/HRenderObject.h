@@ -10,15 +10,43 @@
  */
 #import "HNode.h"
 
+#import "HBaseEffect.h"
 @interface HRenderObject : HNode
 
 #pragma mark  render
 @property(nonatomic,strong)HTexture* texture;
-@property(nonatomic,strong)HGLModel*   model;
 @property(nonatomic,strong)HProgram* program;
+@property(nonatomic,strong)HGLModel* model;
 
--(void)setupTexture:(HTexture*)texture;
--(void)setupModel:(HGLModel*)model;
--(void)setupProgram:(HProgram*)program;
+@property(nonatomic,strong)HBaseEffect* shader;
+
+
+
+-(instancetype)initWithShader:(HBaseEffect*)shader vertices:(VertexColor*)vertices vertexCount:(unsigned int)vertexCount indices:(GLubyte*) indices indexCount:(unsigned int)indexCount;
+
+
+//for  texture
+-(instancetype)initWithShader:(HBaseEffect*)shader verticesTexCoord:(VertexTexCoord*)vertices vertexCount:(unsigned int)vertexCount indices:(GLubyte*) indices indexCount:(unsigned int)indexCount;
+
+
+-(instancetype)initWithShader:(HBaseEffect*)shader vertices:(VertexColor*)vertices vertexCount:(unsigned int)vertexCount;
+
+
+-(instancetype)initWithModelShader:(HBaseEffect*)shader vertices:(VertexTextureNorm*)vertices vertexCount:(unsigned int)vertexCount;
+
+
+-(instancetype)initWithShader:(HBaseEffect*)shader verticesTexture:(VertexTexture*)vertices vertexCount:(unsigned int)vertexCount indices:(GLubyte*) indices indexCount:(unsigned int)indexCount;
+
+
+-(instancetype)initWithShader:(HBaseEffect*)shader verticesTextureNorm:(VertexTextureNorm*)vertices vertexCount:(unsigned int)vertexCount indices:(GLubyte*) indices indexCount:(unsigned int)indexCount;
+
+
+
+-(void)render;
+-(void)renderWithParentModelViewMatrix:(GLKMatrix4)parentModelViewMatrix;
+
+
+-(void)loadTexture:(UIImage*)image;
+
 
 @end

@@ -10,5 +10,4 @@ void main()
     vTexCoord = aTexCoord;
     gl_Position = uModelViewProjectionMatrix * aPosition;
 }
-);
 

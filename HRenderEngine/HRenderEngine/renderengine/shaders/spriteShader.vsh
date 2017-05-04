@@ -4,18 +4,19 @@ precision lowp int;
 
 attribute highp vec4	aPosition;
 attribute vec2			aTexCoord;
-//attribute vec4          aVertexColor;
+attribute vec4          aColor;
+attribute vec3          aNormal;
 
 varying vec2			vTexCoord;
-//varying vec4            vVertexColor;
+varying vec4            vColor;
 
-uniform mat4			uModelViewProjectionMatrix;
-
+uniform mat4			uModelViewMatrix;
+uniform mat4			uProjectionMatrix;
 void main(void)
 {
     vTexCoord    = aTexCoord;
-   // vVertexColor = aVertexColor;
+    vColor       = aColor;
     
-    gl_Position  = uModelViewProjectionMatrix * aPosition;
+    gl_Position  = uProjectionMatrix * uModelViewMatrix * aPosition;
     
 }

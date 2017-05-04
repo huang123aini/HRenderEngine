@@ -23,6 +23,11 @@
         self.position  = GLKVector3Make(0.0f, 0.0f, 0.0f);
         self.rotation  = GLKVector3Make(0.0f, 0.0f, 0.0f);
         self.scale     = GLKVector3Make(1.0f, 1.0f, 1.0f);
+        
+        self.rotationX = self.rotationY = self.rotationZ = 0.0f;
+        
+        
+        
         self.isVisible = NO;
         
         return self;

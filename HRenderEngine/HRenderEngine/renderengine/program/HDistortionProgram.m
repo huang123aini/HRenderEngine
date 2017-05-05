@@ -9,6 +9,7 @@
 #import "HDistortionProgram.h"
 
 #define DISTORTION_VERTEXSHADER    [[NSBundle mainBundle] pathForResource:@"distortionShader" ofType:@"vsh"]
+
 #define DISTORTION_FRAGMENTSHADER  [[NSBundle mainBundle] pathForResource:@"distortionShader" ofType:@"fsh"]
 
 
@@ -19,6 +20,7 @@
 @end
 
 @implementation HDistortionProgram
+
 -(instancetype)init
 {
     if (self = [super init])
@@ -33,11 +35,8 @@
         //4.
         [self bindAttributesAndUniforms];
         
-        return self;
-    }else
-    {
-        return nil;
     }
+    return self;
 }
 
 -(void)setupAttributesAndUniforms
@@ -68,6 +67,7 @@
         self.uTextureCoordScale = glGetUniformLocation(self.program, "uTextureCoordScale");
        
         self.uSampler = glGetUniformLocation(self.program, "uSampler");
+        
         if (self.uTextureCoordScale == -1 || self.uSampler == -1)
         {
             [NSException raise:@"DistortionRenderer" format:@"Could not get attrib location for uTextureCoordScale or uSampler"];

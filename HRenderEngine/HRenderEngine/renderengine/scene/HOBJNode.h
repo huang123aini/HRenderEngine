@@ -13,4 +13,5 @@
 
 -(instancetype)initWithOBJFile:(NSString*)objFile;
 
+-(void)update:(float)dt;
 @end

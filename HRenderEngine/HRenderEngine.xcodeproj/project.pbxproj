@@ -42,8 +42,9 @@
 		FF152AF51EA4C9A000BA2B1B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF152AF41EA4C9A000BA2B1B /* CoreMotion.framework */; };
 		FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AF91EA4D7BC00BA2B1B /* HDistortionModel.m */; };
 		FF152AFD1EA4D7E000BA2B1B /* HDistortionRender.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */; };
-		FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */; };
-		FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */; };
+		FF317AB71EBAFC2A00369287 /* monkey.obj in Resources */ = {isa = PBXBuildFile; fileRef = FF317AB61EBAFC2A00369287 /* monkey.obj */; };
+		FF317AC91EBB13A200369287 /* distortionShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF317AC71EBB13A200369287 /* distortionShader.fsh */; };
+		FF317ACA1EBB13A200369287 /* distortionShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF317AC81EBB13A200369287 /* distortionShader.vsh */; };
 		FF9613E21EAA0AC400307FAC /* HMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9613E11EAA0AC400307FAC /* HMathUtils.m */; };
 		FF9D2D931EA85C75002CD9E4 /* HCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9D2D8E1EA85C75002CD9E4 /* HCamera.m */; };
 		FF9D2D961EA85EB8002CD9E4 /* HScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9D2D951EA85EB8002CD9E4 /* HScene.m */; };
@@ -59,7 +60,6 @@
 		FFD081F91EBAD5EE00C16B2A /* HOBJNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081F81EBAD5EE00C16B2A /* HOBJNode.m */; };
 		FFD081FB1EBADFB000C16B2A /* complicate.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FA1EBADFB000C16B2A /* complicate.obj */; };
 		FFD081FD1EBAE19200C16B2A /* pyramid.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FC1EBAE19200C16B2A /* pyramid.obj */; };
-		FFD082001EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FE1EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj */; };
 		FFD082011EBAF5BF00C16B2A /* EyesWhite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */; };
 		FFE129C11EADCD7F009B4B22 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE129C01EADCD7F009B4B22 /* zebra.png */; };
 		FFE129C41EADF66F009B4B22 /* HSpriteProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */; };
@@ -137,8 +137,9 @@
 		FF152AF91EA4D7BC00BA2B1B /* HDistortionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionModel.m; sourceTree = "<group>"; };
 		FF152AFB1EA4D7E000BA2B1B /* HDistortionRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDistortionRender.h; sourceTree = "<group>"; };
 		FF152AFC1EA4D7E000BA2B1B /* HDistortionRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionRender.m; sourceTree = "<group>"; };
-		FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.vsh; sourceTree = "<group>"; };
-		FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.fsh; sourceTree = "<group>"; };
+		FF317AB61EBAFC2A00369287 /* monkey.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = monkey.obj; sourceTree = "<group>"; };
+		FF317AC71EBB13A200369287 /* distortionShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.fsh; sourceTree = "<group>"; };
+		FF317AC81EBB13A200369287 /* distortionShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.vsh; sourceTree = "<group>"; };
 		FF45FB471EA8B29100E9F2A6 /* HVertexMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HVertexMacros.h; sourceTree = "<group>"; };
 		FF9613E01EAA0AC400307FAC /* HMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMathUtils.h; sourceTree = "<group>"; };
 		FF9613E11EAA0AC400307FAC /* HMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMathUtils.m; sourceTree = "<group>"; };
@@ -166,7 +167,6 @@
 		FFD081F81EBAD5EE00C16B2A /* HOBJNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HOBJNode.m; sourceTree = "<group>"; };
 		FFD081FA1EBADFB000C16B2A /* complicate.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = complicate.obj; sourceTree = "<group>"; };
 		FFD081FC1EBAE19200C16B2A /* pyramid.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pyramid.obj; sourceTree = "<group>"; };
-		FFD081FE1EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bigmax_White_OBJ.obj; sourceTree = "<group>"; };
 		FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EyesWhite.jpg; sourceTree = "<group>"; };
 		FFE129C01EADCD7F009B4B22 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
 		FFE129C21EADF66F009B4B22 /* HSpriteProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSpriteProgram.h; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 		FF12766B1EA73FE400985047 /* testResources */ = {
 			isa = PBXGroup;
 			children = (
-				FFD081FE1EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj */,
+				FF317AB61EBAFC2A00369287 /* monkey.obj */,
 				FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */,
 				FFD081FA1EBADFB000C16B2A /* complicate.obj */,
 				FFD081FC1EBAE19200C16B2A /* pyramid.obj */,
@@ -410,8 +410,8 @@
 				FF1275F51EA5BCE300985047 /* avplayerShader.fsh */,
 				FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */,
 				FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */,
-				FF152AFF1EA4DAD200BA2B1B /* distortionShader.vsh */,
-				FF152B001EA4DAD200BA2B1B /* distortionShader.fsh */,
+				FF317AC81EBB13A200369287 /* distortionShader.vsh */,
+				FF317AC71EBB13A200369287 /* distortionShader.fsh */,
 			);
 			name = baseShader;
 			sourceTree = "<group>";
@@ -544,11 +544,11 @@
 				FFE129C11EADCD7F009B4B22 /* zebra.png in Resources */,
 				FFE129C71EADF6E3009B4B22 /* spriteShader.fsh in Resources */,
 				FFD081FD1EBAE19200C16B2A /* pyramid.obj in Resources */,
+				FF317AC91EBB13A200369287 /* distortionShader.fsh in Resources */,
+				FF317AB71EBAFC2A00369287 /* monkey.obj in Resources */,
 				FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */,
-				FF152B011EA4DAD200BA2B1B /* distortionShader.vsh in Resources */,
 				FFAF4B531EB8642B00188639 /* stone.jpg in Resources */,
 				FFAF4A3B1EB0AC9300188639 /* lemur.png in Resources */,
-				FFD082001EBAF5BF00C16B2A /* Bigmax_White_OBJ.obj in Resources */,
 				FF12766A1EA73FDB00985047 /* 6.jpg in Resources */,
 				FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */,
 				FF152AD01EA4A1B500BA2B1B /* ReadMe in Resources */,
@@ -559,10 +559,10 @@
 				FFE44C9E1EA4737600A4D95A /* Main.storyboard in Resources */,
 				FF1275FB1EA5BCE300985047 /* ijkplayerShader.fsh in Resources */,
 				FFD082011EBAF5BF00C16B2A /* EyesWhite.jpg in Resources */,
-				FF152B021EA4DAD200BA2B1B /* distortionShader.fsh in Resources */,
 				FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */,
 				FFD081FB1EBADFB000C16B2A /* complicate.obj in Resources */,
 				FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */,
+				FF317ACA1EBB13A200369287 /* distortionShader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

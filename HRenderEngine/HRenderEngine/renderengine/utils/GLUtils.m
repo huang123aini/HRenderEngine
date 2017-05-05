@@ -168,11 +168,23 @@ void swapt(float* width, float *height)
         HLog(@"Shader compile log:\n%s", log);
         free(log);
     }
+    
 #endif
     
     glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
     if (status == 0)
     {
+        
+        GLint logLength;
+        glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
+        if (logLength <= 0)
+        {
+            GLchar *log = (GLchar *)malloc(logLength);
+            glGetShaderInfoLog(*shader, logLength, &logLength, log);
+            HLog(@"Shader compile log:\n%s", log);
+            free(log);
+        }
+        
         glDeleteShader(*shader);
         return NO;
     }

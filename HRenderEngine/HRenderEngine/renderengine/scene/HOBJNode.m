@@ -32,4 +32,9 @@
     return self;
 }
 
+-(void)update:(float)dt
+{
+ self.rotationY += M_PI *dt/6;
+}
+
 @end

@@ -21,11 +21,10 @@
 @property(nonatomic,assign)GLuint FBOTexture;
 @property(nonatomic,assign)GLuint ColorRender;
 
-@property(nonatomic,strong) HDistortionProgram* program;
+@property(nonatomic,strong) HDistortionProgram* distortionProgram;
 
 @property(nonatomic, strong)HDistortionModel*   leftEye;
 @property(nonatomic, strong)HDistortionModel*   rightEye;
-
 
 @end
 
@@ -104,44 +103,41 @@
 
 - (void)draw:(HDistortionModel *)eye
 {
-    [self.program useProgram];
-    [self.program bindAttributesAndUniforms];
+    [self.distortionProgram useProgram];
+    // [self.program bindAttributesAndUniforms];
     
     glBindBuffer(GL_ARRAY_BUFFER, eye.vertexBuffer);
     
-    glVertexAttribPointer(self.program.aPosition, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(0 * sizeof(float)));
+    glEnableVertexAttribArray(self.distortionProgram.aPosition);
+    glVertexAttribPointer(self.distortionProgram.aPosition, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(0 * sizeof(float)));
    
-   // glEnableVertexAttribArray(self.program.aPosition);
-    
-    glVertexAttribPointer(self.program.aVignette, 1, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(2 * sizeof(float)));
-   // glEnableVertexAttribArray(self.program.aVignette);
+    glVertexAttribPointer(self.distortionProgram.aVignette, 1, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(2 * sizeof(float)));
+    glEnableVertexAttribArray(self.distortionProgram.aVignette);
     
     
-    glVertexAttribPointer(self.program.aBlueTextureCoord, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(7 * sizeof(float)));
-    //glEnableVertexAttribArray(self.program.aBlueTextureCoord);
+    glVertexAttribPointer(self.distortionProgram.aBlueTextureCoord, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(7 * sizeof(float)));
+    glEnableVertexAttribArray(self.distortionProgram.aBlueTextureCoord);
     
     if (YES)
     {
-        glVertexAttribPointer(self.program.aRedTextureCoord, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(3 * sizeof(float)));
-       // glEnableVertexAttribArray(self.program.aRedTextureCoord);
+        glVertexAttribPointer(self.distortionProgram.aRedTextureCoord, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(3 * sizeof(float)));
+        glEnableVertexAttribArray(self.distortionProgram.aRedTextureCoord);
         
-        glVertexAttribPointer(self.program.aGreenTextureCoord, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(5 * sizeof(float)));
-       // glEnableVertexAttribArray(self.program.aGreenTextureCoord);
+        glVertexAttribPointer(self.distortionProgram.aGreenTextureCoord, 2, GL_FLOAT, GL_FALSE, 9 * sizeof(float), (void *)(5 * sizeof(float)));
+        glEnableVertexAttribArray(self.distortionProgram.aGreenTextureCoord);
     }
     
     //绘制FBO
     {
       glActiveTexture(GL_TEXTURE0);
       glBindTexture(GL_TEXTURE_2D, _FBOTexture);
-     // glUniform1i(self.program.uSampler, 0);
+      glUniform1i(self.distortionProgram.uSampler, 0);
     }
     
-    
    // float _resolutionScale = 1;
-   // glUniform1f(self.program.uTextureCoordScale, _resolutionScale);
+    glUniform1f(self.distortionProgram.uTextureCoordScale, 1);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, eye.indexBuffer);
-    
     glDrawElements(GL_TRIANGLE_STRIP, eye.indexCount, GL_UNSIGNED_SHORT, 0);
 }
 
@@ -187,10 +183,9 @@
 {
     
     [self setupFrameBuffer];
-    self.program = [[HDistortionProgram alloc] init];
+    self.distortionProgram = [[HDistortionProgram alloc] init];
     [self resetFrameBufferSize];
-    
-    
+
 }
 
 - (void)checkGLError

@@ -16,6 +16,7 @@
 @interface HProgram : NSObject
 
 @property(nonatomic,assign)GLuint program;
+
 /*Base attributes and uniforms : vertex position ,texture coord, space matrix */
 
 @property(nonatomic,assign)GLuint aPosition;

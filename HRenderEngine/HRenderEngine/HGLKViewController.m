@@ -23,15 +23,12 @@
 #import "HSpriteProgram.h"
 
 @interface HGLKViewController ()
-{
- HBaseEffect *_shader;
-    
- HBaseEffect* _shader2;
-}
 
+
+@property (nonatomic, strong) NSLock * openGLLock;
 @property(nonatomic,strong)EAGLContext* glContext;
-
 @property (nonatomic, assign) CGRect viewport;
+
 
 @property(nonatomic,strong)HSprite* sprite;
 @property(nonatomic,strong)HCubeT* cube;
@@ -55,16 +52,28 @@
     //
     [HGLManager sharedHGLManager].renderView = (GLKView*)self.view;
     
+    
+    [self setupOpenGL];
+    
     self.fps = 30;
+   
+    
+}
+
+-(void)setupOpenGL
+{
     //1.
     [self setupContext];
-    
     //2.
     [self setupGLKView];
     
+    self.distortionRender = [HDistortionRender distortionRenderer]; //设置畸变渲染
+    
+//    CGFloat scale = [UIScreen mainScreen].scale;
+//    GLKView * glView = (GLKView*)self.view;
+//    self.distortionRender.viewportSize = CGSizeMake(CGRectGetWidth(glView.bounds) * scale, CGRectGetHeight(glView.bounds) * scale);
     //3.
     [self setupModelAndTexture];
-    
 }
 
 -(void)setupContext
@@ -87,35 +96,28 @@
     view.drawableDepthFormat = GLKViewDrawableDepthFormat24;
     self.preferredFramesPerSecond = self.fps;
     view.contentScaleFactor = [UIScreen mainScreen].scale;
-    
-    self.distortionRender = [HDistortionRender distortionRenderer]; //设置畸变渲染
-    
     self.viewport = view.bounds;
 }
 
 -(void)setupModelAndTexture
 {
     self.avPlayerProgram = [[HAVPlayerProgram alloc] init];
+    
     self.ijkPlayerProgram = [[HIJKPlayerProgram alloc] init];
     
  
 
     //生成的场景里元素都在当前上下文中
     self.scene = [[HScene alloc] initWithContext:self.glContext];
-//    
+    
     _sprite3d = [[HSprite3D alloc] initWithImage:[UIImage imageNamed:@"6.jpg"]];
     [self.scene addChild:_sprite3d];
    
-//    _cube = [[HCubeT alloc] init];
-//    _cube.scale = GLKVector3Make(0.5, 0.5, 0.5);
-//    [self.scene addChild:_cube];
-//    
+    _cube = [[HCubeT alloc] init];
+    _cube.scale = GLKVector3Make(0.5, 0.5, 0.5);
+    [self.scene addChild:_cube];
     
-    _cubeNorm = [[HCubeNorm alloc] init];
-    _cubeNorm.scale = GLKVector3Make(0.5, 0.5, 0.5);
-    [self.scene addChild:_cubeNorm];
-    
-    
+
     
       _sprite = [[HSprite alloc] initWithImage:[UIImage imageNamed:@"6.jpg"] Rect:HRectMake(0.5, 0.5)];
     
@@ -124,9 +126,9 @@
     
     
     _objNode = [[HOBJNode alloc] initWithOBJFile:@"pyramid"];
-    _objNode.scale = GLKVector3Make(0.05, 0.05, 0.05);
+    _objNode.scale = GLKVector3Make(0.01, 0.01, 0.01);
+    _objNode.position =GLKVector3Make(0.5,-0.5,0);
     
-    _objNode.position =GLKVector3Make(1,-1,0);
     [self.scene addChild:_objNode];
     
 
@@ -160,19 +162,17 @@
     
 //    glEnable(GL_DEPTH_TEST);
 //    glEnable(GL_CULL_FACE);
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//    glEnable(GL_BLEND);
+//    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+////    
 //    
     
-    
     //1.bind fbo
-  //  [self.distortionRender beforDrawFrame];
+    [self.distortionRender beforDrawFrame];
     
     
     
     //2.
-    
-
     {
         GLKMatrix4 leftMatrix;
         GLfloat scale = [UIScreen mainScreen].scale;
@@ -196,9 +196,6 @@
         }
     }
     
-    
-   // [self.scene draw];
-    
     //draw normal object
     {
         
@@ -212,11 +209,23 @@
 //        glDrawElements(GL_TRIANGLES, self.normalModel.indexCount, GL_UNSIGNED_SHORT, 0);
     }
     
-
+    
+    [view bindDrawable];
     
     //3.DRAW  FBO
     
-//    [self.distortionRender afterDrawFrame];
+    [self.distortionRender afterDrawFrame];
+}
+
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    CGFloat scale = [UIScreen mainScreen].scale;
+    
+    GLKView * glView = (GLKView*)self.view;
+    
+    self.distortionRender.viewportSize = CGSizeMake(CGRectGetWidth(glView.bounds) * scale, CGRectGetHeight(glView.bounds) * scale);
 }
 
 #pragma mark 强制横屏

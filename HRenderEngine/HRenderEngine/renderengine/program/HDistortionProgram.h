@@ -10,7 +10,6 @@
 
 @interface HDistortionProgram : HProgram
 
-
 @property(nonatomic,assign)GLuint aVignette;
 @property(nonatomic,assign)GLuint aRedTextureCoord;
 @property(nonatomic,assign)GLuint aGreenTextureCoord;

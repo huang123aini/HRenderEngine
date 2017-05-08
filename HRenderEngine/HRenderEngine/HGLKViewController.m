@@ -19,24 +19,23 @@
 #import "HCubeNorm.h"
 #import "HOBJNode.h"
 
+#import "HVideo.h"
 
-#import "HSpriteProgram.h"
 
 @interface HGLKViewController ()
 
-
-@property (nonatomic, strong) NSLock * openGLLock;
 @property(nonatomic,strong)EAGLContext* glContext;
-@property (nonatomic, assign) CGRect viewport;
+@property (nonatomic, assign) CGRect    viewport;
 
 
-@property(nonatomic,strong)HSprite* sprite;
-@property(nonatomic,strong)HCubeT* cube;
+@property(nonatomic,strong)HSprite*   sprite;
+@property(nonatomic,strong)HCubeT*    cube;
 @property(nonatomic,strong)HCubeNorm* cubeNorm;
-@property(nonatomic,strong)HOBJNode* objNode;
+@property(nonatomic,strong)HOBJNode*  objNode;
 
 
 
+@property(nonatomic,strong)HVideo*    video;
 @property(nonatomic,strong)HSprite3D* sprite3d;
 
 @property(nonatomic,strong)HScene* scene;
@@ -110,8 +109,17 @@
     //生成的场景里元素都在当前上下文中
     self.scene = [[HScene alloc] initWithContext:self.glContext];
     
-    _sprite3d = [[HSprite3D alloc] initWithImage:[UIImage imageNamed:@"6.jpg"]];
-    [self.scene addChild:_sprite3d];
+//    _sprite3d = [[HSprite3D alloc] initWithImage:[UIImage imageNamed:@"6.jpg"]];
+//    [self.scene addChild:_sprite3d];
+//    
+    
+    
+    NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"fire" ofType:@"mp4"];
+    
+    _video = [[HVideo alloc] initAVPlayerWithURL:[NSURL fileURLWithPath:videoPath]];
+    
+    [self.scene addChild:_video];
+    
    
     _cube = [[HCubeT alloc] init];
     _cube.scale = GLKVector3Make(0.5, 0.5, 0.5);
@@ -169,8 +177,7 @@
     
     //1.bind fbo
     [self.distortionRender beforDrawFrame];
-    
-    
+
     
     //2.
     {

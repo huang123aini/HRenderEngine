@@ -15,9 +15,9 @@
 
 @property(nonatomic, assign)GLuint textureId;
 
+
 - (void)setupTextureWithImage:(UIImage *)image TextureFilter:(HTextureFilter)textureFilter;//设置纹理
  
-
 -(void)bindTexture;
 
 @end

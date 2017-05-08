@@ -7,7 +7,11 @@
 //
 
 #import "HTexture.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface HVideoTexture : HTexture
 
+-(instancetype)initWithAVPlayerItem:(AVPlayerItem*)playerItem;
+
+- (CVPixelBufferRef)updateVideoTexture:(EAGLContext *)context Handle:(GLuint)uSamplerLocal;
 @end

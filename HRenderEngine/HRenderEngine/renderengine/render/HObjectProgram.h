@@ -10,9 +10,6 @@
 
 @interface HObjectProgram : HProgram
 
-
-@property(nonatomic,assign)GLuint uSampler;
-
 -(instancetype)init;
 
 @end

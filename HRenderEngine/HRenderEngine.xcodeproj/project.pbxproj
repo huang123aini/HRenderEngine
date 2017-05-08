@@ -45,6 +45,11 @@
 		FF317AB71EBAFC2A00369287 /* monkey.obj in Resources */ = {isa = PBXBuildFile; fileRef = FF317AB61EBAFC2A00369287 /* monkey.obj */; };
 		FF317AC91EBB13A200369287 /* distortionShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF317AC71EBB13A200369287 /* distortionShader.fsh */; };
 		FF317ACA1EBB13A200369287 /* distortionShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF317AC81EBB13A200369287 /* distortionShader.vsh */; };
+		FF317AFA1EBC43E000369287 /* VIMVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF317AF71EBC43E000369287 /* VIMVideoPlayer.m */; };
+		FF317AFB1EBC43E000369287 /* VIMVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF317AF91EBC43E000369287 /* VIMVideoPlayerView.m */; };
+		FF317AFE1EBC45D300369287 /* HVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = FF317AFD1EBC45D300369287 /* HVideo.m */; };
+		FF317B011EBC4A8E00369287 /* HVideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = FF317B001EBC4A8E00369287 /* HVideoData.m */; };
+		FF317B041EBC678300369287 /* fire.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FF317B031EBC678300369287 /* fire.mp4 */; };
 		FF9613E21EAA0AC400307FAC /* HMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9613E11EAA0AC400307FAC /* HMathUtils.m */; };
 		FF9D2D931EA85C75002CD9E4 /* HCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9D2D8E1EA85C75002CD9E4 /* HCamera.m */; };
 		FF9D2D961EA85EB8002CD9E4 /* HScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9D2D951EA85EB8002CD9E4 /* HScene.m */; };
@@ -140,6 +145,15 @@
 		FF317AB61EBAFC2A00369287 /* monkey.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = monkey.obj; sourceTree = "<group>"; };
 		FF317AC71EBB13A200369287 /* distortionShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.fsh; sourceTree = "<group>"; };
 		FF317AC81EBB13A200369287 /* distortionShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = distortionShader.vsh; sourceTree = "<group>"; };
+		FF317AF61EBC43E000369287 /* VIMVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIMVideoPlayer.h; sourceTree = "<group>"; };
+		FF317AF71EBC43E000369287 /* VIMVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIMVideoPlayer.m; sourceTree = "<group>"; };
+		FF317AF81EBC43E000369287 /* VIMVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIMVideoPlayerView.h; sourceTree = "<group>"; };
+		FF317AF91EBC43E000369287 /* VIMVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIMVideoPlayerView.m; sourceTree = "<group>"; };
+		FF317AFC1EBC45D300369287 /* HVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HVideo.h; path = ../scene/HVideo.h; sourceTree = "<group>"; };
+		FF317AFD1EBC45D300369287 /* HVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HVideo.m; path = ../scene/HVideo.m; sourceTree = "<group>"; };
+		FF317AFF1EBC4A8E00369287 /* HVideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HVideoData.h; sourceTree = "<group>"; };
+		FF317B001EBC4A8E00369287 /* HVideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HVideoData.m; sourceTree = "<group>"; };
+		FF317B031EBC678300369287 /* fire.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.mp4; sourceTree = "<group>"; };
 		FF45FB471EA8B29100E9F2A6 /* HVertexMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HVertexMacros.h; sourceTree = "<group>"; };
 		FF9613E01EAA0AC400307FAC /* HMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMathUtils.h; sourceTree = "<group>"; };
 		FF9613E11EAA0AC400307FAC /* HMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMathUtils.m; sourceTree = "<group>"; };
@@ -233,6 +247,7 @@
 		FF12766B1EA73FE400985047 /* testResources */ = {
 			isa = PBXGroup;
 			children = (
+				FF317B031EBC678300369287 /* fire.mp4 */,
 				FF317AB61EBAFC2A00369287 /* monkey.obj */,
 				FFD081FF1EBAF5BF00C16B2A /* EyesWhite.jpg */,
 				FFD081FA1EBADFB000C16B2A /* complicate.obj */,
@@ -268,6 +283,7 @@
 		FF152AB41EA49B8200BA2B1B /* renderengine */ = {
 			isa = PBXGroup;
 			children = (
+				FF317AF41EBC43A800369287 /* video */,
 				FF9D2D841EA85C62002CD9E4 /* collision */,
 				FF1276591EA7160300985047 /* testDemo */,
 				FF1275ED1EA5B8AF00985047 /* program */,
@@ -347,6 +363,8 @@
 			children = (
 				FF152AC41EA49F2B00BA2B1B /* HTexture.h */,
 				FF152AC51EA49F2B00BA2B1B /* HTexture.m */,
+				FF317AFF1EBC4A8E00369287 /* HVideoData.h */,
+				FF317B001EBC4A8E00369287 /* HVideoData.m */,
 				FF1276551EA704F600985047 /* HVideoTexture.h */,
 				FF1276561EA704F600985047 /* HVideoTexture.m */,
 			);
@@ -397,6 +415,27 @@
 				FF9613D41EA9D9A800307FAC /* baseShader */,
 			);
 			path = shaders;
+			sourceTree = "<group>";
+		};
+		FF317AF41EBC43A800369287 /* video */ = {
+			isa = PBXGroup;
+			children = (
+				FF317AF51EBC43B000369287 /* avplayer */,
+			);
+			path = video;
+			sourceTree = "<group>";
+		};
+		FF317AF51EBC43B000369287 /* avplayer */ = {
+			isa = PBXGroup;
+			children = (
+				FF317AF61EBC43E000369287 /* VIMVideoPlayer.h */,
+				FF317AF71EBC43E000369287 /* VIMVideoPlayer.m */,
+				FF317AF81EBC43E000369287 /* VIMVideoPlayerView.h */,
+				FF317AF91EBC43E000369287 /* VIMVideoPlayerView.m */,
+				FF317AFC1EBC45D300369287 /* HVideo.h */,
+				FF317AFD1EBC45D300369287 /* HVideo.m */,
+			);
+			name = avplayer;
 			sourceTree = "<group>";
 		};
 		FF9613D41EA9D9A800307FAC /* baseShader */ = {
@@ -548,6 +587,7 @@
 				FF317AB71EBAFC2A00369287 /* monkey.obj in Resources */,
 				FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */,
 				FFAF4B531EB8642B00188639 /* stone.jpg in Resources */,
+				FF317B041EBC678300369287 /* fire.mp4 in Resources */,
 				FFAF4A3B1EB0AC9300188639 /* lemur.png in Resources */,
 				FF12766A1EA73FDB00985047 /* 6.jpg in Resources */,
 				FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */,
@@ -575,6 +615,7 @@
 			files = (
 				FF1276871EA7725300985047 /* HFileTools.m in Sources */,
 				FF152AF01EA4C8BA00BA2B1B /* HSensors.m in Sources */,
+				FF317B011EBC4A8E00369287 /* HVideoData.m in Sources */,
 				FF152AD41EA4A32900BA2B1B /* GLUtils.m in Sources */,
 				FF1276571EA704F600985047 /* HVideoTexture.m in Sources */,
 				FF152ABA1EA49B8F00BA2B1B /* HNode.m in Sources */,
@@ -584,10 +625,13 @@
 				FF152AED1EA4C84500BA2B1B /* HCameraMatrix.m in Sources */,
 				FFE44C9B1EA4737600A4D95A /* ViewController.m in Sources */,
 				FFD081F31EBAD0F100C16B2A /* OBJLoader.m in Sources */,
+				FF317AFA1EBC43E000369287 /* VIMVideoPlayer.m in Sources */,
 				FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */,
 				FFAF4B661EB9E7F300188639 /* HCubeNorm.m in Sources */,
 				FFE44C981EA4737600A4D95A /* AppDelegate.m in Sources */,
 				FFD081F61EBAD12500C16B2A /* OBJLoaderUtils.m in Sources */,
+				FF317AFE1EBC45D300369287 /* HVideo.m in Sources */,
+				FF317AFB1EBC43E000369287 /* VIMVideoPlayerView.m in Sources */,
 				FFE44C951EA4737600A4D95A /* main.m in Sources */,
 				FF152AE11EA4A8C400BA2B1B /* HSprite3D.m in Sources */,
 				FF12765C1EA7165900985047 /* HDemosVc.m in Sources */,

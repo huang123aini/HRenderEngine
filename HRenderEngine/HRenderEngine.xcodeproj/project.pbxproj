@@ -23,8 +23,6 @@
 		FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276671EA7391B00985047 /* HGLVRModel.m */; };
 		FF12766A1EA73FDB00985047 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1276691EA73FDB00985047 /* 6.jpg */; };
 		FF1276801EA7570D00985047 /* HGLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF12767F1EA7570D00985047 /* HGLManager.m */; };
-		FF1276841EA7706500985047 /* HDownLoadUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276831EA7706500985047 /* HDownLoadUtils.m */; };
-		FF1276871EA7725300985047 /* HFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276861EA7725300985047 /* HFileTools.m */; };
 		FF152ABA1EA49B8F00BA2B1B /* HNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FF152AB91EA49B8F00BA2B1B /* HNode.m */; };
 		FF152ABF1EA49BF800BA2B1B /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF152ABE1EA49BF800BA2B1B /* GLKit.framework */; };
 		FF152AC11EA49BFF00BA2B1B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF152AC01EA49BFF00BA2B1B /* OpenGLES.framework */; };
@@ -116,10 +114,6 @@
 		FF1276691EA73FDB00985047 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 6.jpg; path = ../shaders/6.jpg; sourceTree = "<group>"; };
 		FF12767E1EA7570D00985047 /* HGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLManager.h; sourceTree = "<group>"; };
 		FF12767F1EA7570D00985047 /* HGLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGLManager.m; sourceTree = "<group>"; };
-		FF1276821EA7706500985047 /* HDownLoadUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDownLoadUtils.h; sourceTree = "<group>"; };
-		FF1276831EA7706500985047 /* HDownLoadUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDownLoadUtils.m; sourceTree = "<group>"; };
-		FF1276851EA7725300985047 /* HFileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFileTools.h; sourceTree = "<group>"; };
-		FF1276861EA7725300985047 /* HFileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFileTools.m; sourceTree = "<group>"; };
 		FF152AB81EA49B8F00BA2B1B /* HNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNode.h; sourceTree = "<group>"; };
 		FF152AB91EA49B8F00BA2B1B /* HNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNode.m; sourceTree = "<group>"; };
 		FF152ABB1EA49BB600BA2B1B /* RenderEngine.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderEngine.pch; sourceTree = "<group>"; };
@@ -305,17 +299,6 @@
 			name = math;
 			sourceTree = "<group>";
 		};
-		FF1276811EA7702900985047 /* file */ = {
-			isa = PBXGroup;
-			children = (
-				FF1276821EA7706500985047 /* HDownLoadUtils.h */,
-				FF1276831EA7706500985047 /* HDownLoadUtils.m */,
-				FF1276851EA7725300985047 /* HFileTools.h */,
-				FF1276861EA7725300985047 /* HFileTools.m */,
-			);
-			name = file;
-			sourceTree = "<group>";
-		};
 		FF152AB41EA49B8200BA2B1B /* renderengine */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,7 +355,6 @@
 		FF152AB71EA49B8200BA2B1B /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				FF1276811EA7702900985047 /* file */,
 				FF1276711EA74F6700985047 /* math */,
 				FF152AD81EA4A64800BA2B1B /* matrixUtils */,
 				FF152AC21EA49CB400BA2B1B /* Singleton.h */,
@@ -674,7 +656,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1276871EA7725300985047 /* HFileTools.m in Sources */,
 				FF152AF01EA4C8BA00BA2B1B /* HSensors.m in Sources */,
 				FF317B011EBC4A8E00369287 /* HVideoData.m in Sources */,
 				FF152AD41EA4A32900BA2B1B /* GLUtils.m in Sources */,
@@ -704,7 +685,6 @@
 				FFE129C41EADF66F009B4B22 /* HSpriteProgram.m in Sources */,
 				FF152ADB1EA4A79E00BA2B1B /* HRenderObject.m in Sources */,
 				FF152ACE1EA49FEA00BA2B1B /* HProgram.m in Sources */,
-				FF1276841EA7706500985047 /* HDownLoadUtils.m in Sources */,
 				FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */,
 				FF1276801EA7570D00985047 /* HGLManager.m in Sources */,
 				FF1276541EA61CFE00985047 /* HGLKViewController.m in Sources */,

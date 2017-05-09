@@ -100,11 +100,7 @@
 
 -(void)setupModelAndTexture
 {
-    self.avPlayerProgram = [[HAVPlayerProgram alloc] init];
-    
-    self.ijkPlayerProgram = [[HIJKPlayerProgram alloc] init];
-    
- 
+
 
     //生成的场景里元素都在当前上下文中
     self.scene = [[HScene alloc] initWithContext:self.glContext];

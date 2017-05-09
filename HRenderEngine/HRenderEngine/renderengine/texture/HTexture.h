@@ -11,6 +11,8 @@
 #import "GLUtils.h"
 #import "HMacros.h"
 
+@class HFrame;
+
 @interface HTexture : NSObject
 
 @property(nonatomic, assign)GLuint textureId;
@@ -19,5 +21,11 @@
 - (void)setupTextureWithImage:(UIImage *)image TextureFilter:(HTextureFilter)textureFilter;//设置纹理
  
 -(void)bindTexture;
+
+
+
+//for nv12  yuv420
+
+- (BOOL)updateTextureWithHFrame:(HFrame *)glFrame aspect:(CGFloat *)aspect;
 
 @end

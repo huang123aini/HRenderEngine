@@ -35,11 +35,13 @@
 - (CVOpenGLESTextureCacheRef)textureCache:(EAGLContext*)context
 {
     NSValue* value = [self.mContextTextureMap objectForKey:context.description];
+    
     CVOpenGLESTextureCacheRef texture = [value pointerValue];
     if (texture == NULL)
     {
         CVReturn err = CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, NULL, (__bridge CVEAGLContext _Nonnull)((__bridge void *)context), NULL, &texture);
         if (err) NSAssert(NO, @"Error at CVOpenGLESTextureCacheCreate");
+        
         [self.mContextTextureMap setObject:[NSValue valueWithPointer:texture] forKey:context.description];
     }
     

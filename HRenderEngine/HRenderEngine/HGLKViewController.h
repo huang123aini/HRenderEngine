@@ -12,8 +12,7 @@
 #import "HGLNormalModel.h"
 #import "HGLVRModel.h"
 #import "HVideoTexture.h"
-#import "HAVPlayerProgram.h"
-#import "HIJKPlayerProgram.h"
+
 
 #import "HCameraMatrix.h"
 
@@ -46,8 +45,6 @@ typedef NS_ENUM(NSUInteger,HDisplayMode)
 
 @property(nonatomic,strong)HVideoTexture* videoTexture;
 
-@property(nonatomic,strong)HAVPlayerProgram* avPlayerProgram;
-@property(nonatomic,strong)HIJKPlayerProgram* ijkPlayerProgram;
 
 @property(nonatomic,strong)HCameraMatrix* vrMatrix;
 

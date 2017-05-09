@@ -49,7 +49,6 @@
         if (pixelBuffer)
         {
             _lastTime = currentTime;
-            
             return pixelBuffer;
         }else
         {

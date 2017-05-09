@@ -29,5 +29,10 @@
     }
 }
 
+- (BOOL)updateTextureWithHFrame:(HFrame *)glFrame aspect:(CGFloat *)aspect
+{
+    return NO;
+}
+
 
 @end

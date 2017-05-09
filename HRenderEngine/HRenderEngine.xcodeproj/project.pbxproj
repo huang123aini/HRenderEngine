@@ -10,12 +10,10 @@
 		FF1275EC1EA5B87F00985047 /* HObjectProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1275EB1EA5B87F00985047 /* HObjectProgram.m */; };
 		FF1275F01EA5BBEB00985047 /* objectShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275EE1EA5BBEB00985047 /* objectShader.vsh */; };
 		FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275EF1EA5BBEB00985047 /* objectShader.fsh */; };
-		FF1275F41EA5BCAD00985047 /* HAVPlayerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */; };
-		FF1275F91EA5BCE300985047 /* avplayerShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F51EA5BCE300985047 /* avplayerShader.fsh */; };
-		FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F61EA5BCE300985047 /* avplayerShader.vsh */; };
-		FF1275FB1EA5BCE300985047 /* ijkplayerShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */; };
-		FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */; };
-		FF1275FF1EA5C2CB00985047 /* HIJKPlayerProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1275FE1EA5C2CB00985047 /* HIJKPlayerProgram.m */; };
+		FF1275F91EA5BCE300985047 /* nv12Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F51EA5BCE300985047 /* nv12Shader.fsh */; };
+		FF1275FA1EA5BCE300985047 /* nv12Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F61EA5BCE300985047 /* nv12Shader.vsh */; };
+		FF1275FB1EA5BCE300985047 /* yuv420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F71EA5BCE300985047 /* yuv420Shader.fsh */; };
+		FF1275FC1EA5BCE300985047 /* yuv420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = FF1275F81EA5BCE300985047 /* yuv420Shader.vsh */; };
 		FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276051EA5E39900985047 /* HDistortionProgram.m */; };
 		FF1276541EA61CFE00985047 /* HGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276531EA61CFE00985047 /* HGLKViewController.m */; };
 		FF1276571EA704F600985047 /* HVideoTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1276561EA704F600985047 /* HVideoTexture.m */; };
@@ -59,6 +57,20 @@
 		FFAF4B591EB9A2A300188639 /* HBaseEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4B581EB9A2A300188639 /* HBaseEffect.m */; };
 		FFAF4B5C1EB9B73600188639 /* HCubeT.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4B5B1EB9B73600188639 /* HCubeT.m */; };
 		FFAF4B661EB9E7F300188639 /* HCubeNorm.m in Sources */ = {isa = PBXBuildFile; fileRef = FFAF4B651EB9E7F300188639 /* HCubeNorm.m */; };
+		FFB1B2411EC065F6008873E3 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B23A1EC065F6008873E3 /* libavcodec.a */; };
+		FFB1B2421EC065F6008873E3 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B23B1EC065F6008873E3 /* libavdevice.a */; };
+		FFB1B2431EC065F6008873E3 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B23C1EC065F6008873E3 /* libavfilter.a */; };
+		FFB1B2441EC065F6008873E3 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B23D1EC065F6008873E3 /* libavformat.a */; };
+		FFB1B2451EC065F6008873E3 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B23E1EC065F6008873E3 /* libavutil.a */; };
+		FFB1B2461EC065F6008873E3 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B23F1EC065F6008873E3 /* libswresample.a */; };
+		FFB1B2471EC065F6008873E3 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB1B2401EC065F6008873E3 /* libswscale.a */; };
+		FFB1B24A1EC0666C008873E3 /* HYUVUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B2491EC0666C008873E3 /* HYUVUtils.m */; };
+		FFB1B24D1EC06749008873E3 /* HImage.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B24C1EC06749008873E3 /* HImage.m */; };
+		FFB1B2531EC06A5B008873E3 /* HNv12Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B2521EC06A5B008873E3 /* HNv12Texture.m */; };
+		FFB1B2561EC07095008873E3 /* HNv12Program.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B2551EC07095008873E3 /* HNv12Program.m */; };
+		FFB1B2591EC07825008873E3 /* HFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B2581EC07825008873E3 /* HFrame.m */; };
+		FFB1B2601EC15A11008873E3 /* HYUV420Program.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B25F1EC15A11008873E3 /* HYUV420Program.m */; };
+		FFB1B2A81EC177CC008873E3 /* HCatpureSessionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB1B2A71EC177CC008873E3 /* HCatpureSessionUtils.m */; };
 		FFD081F01EBACEE700C16B2A /* OBJMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081EF1EBACEE700C16B2A /* OBJMaterial.m */; };
 		FFD081F31EBAD0F100C16B2A /* OBJLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081F21EBAD0F100C16B2A /* OBJLoader.m */; };
 		FFD081F61EBAD12500C16B2A /* OBJLoaderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FFD081F51EBAD12500C16B2A /* OBJLoaderUtils.m */; };
@@ -83,14 +95,10 @@
 		FF1275EB1EA5B87F00985047 /* HObjectProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HObjectProgram.m; path = ../render/HObjectProgram.m; sourceTree = "<group>"; };
 		FF1275EE1EA5BBEB00985047 /* objectShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = objectShader.vsh; sourceTree = "<group>"; };
 		FF1275EF1EA5BBEB00985047 /* objectShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = objectShader.fsh; sourceTree = "<group>"; };
-		FF1275F21EA5BCAD00985047 /* HAVPlayerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAVPlayerProgram.h; sourceTree = "<group>"; };
-		FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAVPlayerProgram.m; sourceTree = "<group>"; };
-		FF1275F51EA5BCE300985047 /* avplayerShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = avplayerShader.fsh; sourceTree = "<group>"; };
-		FF1275F61EA5BCE300985047 /* avplayerShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = avplayerShader.vsh; sourceTree = "<group>"; };
-		FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ijkplayerShader.fsh; sourceTree = "<group>"; };
-		FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ijkplayerShader.vsh; sourceTree = "<group>"; };
-		FF1275FD1EA5C2CB00985047 /* HIJKPlayerProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HIJKPlayerProgram.h; sourceTree = "<group>"; };
-		FF1275FE1EA5C2CB00985047 /* HIJKPlayerProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HIJKPlayerProgram.m; sourceTree = "<group>"; };
+		FF1275F51EA5BCE300985047 /* nv12Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = nv12Shader.fsh; sourceTree = "<group>"; };
+		FF1275F61EA5BCE300985047 /* nv12Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = nv12Shader.vsh; sourceTree = "<group>"; };
+		FF1275F71EA5BCE300985047 /* yuv420Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yuv420Shader.fsh; sourceTree = "<group>"; };
+		FF1275F81EA5BCE300985047 /* yuv420Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yuv420Shader.vsh; sourceTree = "<group>"; };
 		FF1276041EA5E39900985047 /* HDistortionProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDistortionProgram.h; sourceTree = "<group>"; };
 		FF1276051EA5E39900985047 /* HDistortionProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDistortionProgram.m; sourceTree = "<group>"; };
 		FF1276521EA61CFE00985047 /* HGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGLKViewController.h; sourceTree = "<group>"; };
@@ -171,6 +179,27 @@
 		FFAF4B5B1EB9B73600188639 /* HCubeT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCubeT.m; sourceTree = "<group>"; };
 		FFAF4B641EB9E7F300188639 /* HCubeNorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCubeNorm.h; sourceTree = "<group>"; };
 		FFAF4B651EB9E7F300188639 /* HCubeNorm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCubeNorm.m; sourceTree = "<group>"; };
+		FFB1B23A1EC065F6008873E3 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = HRenderEngine/ffmpeg/libavcodec.a; sourceTree = "<group>"; };
+		FFB1B23B1EC065F6008873E3 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = HRenderEngine/ffmpeg/libavdevice.a; sourceTree = "<group>"; };
+		FFB1B23C1EC065F6008873E3 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = HRenderEngine/ffmpeg/libavfilter.a; sourceTree = "<group>"; };
+		FFB1B23D1EC065F6008873E3 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = HRenderEngine/ffmpeg/libavformat.a; sourceTree = "<group>"; };
+		FFB1B23E1EC065F6008873E3 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = HRenderEngine/ffmpeg/libavutil.a; sourceTree = "<group>"; };
+		FFB1B23F1EC065F6008873E3 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = HRenderEngine/ffmpeg/libswresample.a; sourceTree = "<group>"; };
+		FFB1B2401EC065F6008873E3 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = HRenderEngine/ffmpeg/libswscale.a; sourceTree = "<group>"; };
+		FFB1B2481EC0666C008873E3 /* HYUVUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUVUtils.h; sourceTree = "<group>"; };
+		FFB1B2491EC0666C008873E3 /* HYUVUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUVUtils.m; sourceTree = "<group>"; };
+		FFB1B24B1EC06749008873E3 /* HImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HImage.h; sourceTree = "<group>"; };
+		FFB1B24C1EC06749008873E3 /* HImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HImage.m; sourceTree = "<group>"; };
+		FFB1B2511EC06A5B008873E3 /* HNv12Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNv12Texture.h; sourceTree = "<group>"; };
+		FFB1B2521EC06A5B008873E3 /* HNv12Texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNv12Texture.m; sourceTree = "<group>"; };
+		FFB1B2541EC07095008873E3 /* HNv12Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNv12Program.h; sourceTree = "<group>"; };
+		FFB1B2551EC07095008873E3 /* HNv12Program.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNv12Program.m; sourceTree = "<group>"; };
+		FFB1B2571EC07825008873E3 /* HFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFrame.h; sourceTree = "<group>"; };
+		FFB1B2581EC07825008873E3 /* HFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFrame.m; sourceTree = "<group>"; };
+		FFB1B25E1EC15A11008873E3 /* HYUV420Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUV420Program.h; sourceTree = "<group>"; };
+		FFB1B25F1EC15A11008873E3 /* HYUV420Program.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUV420Program.m; sourceTree = "<group>"; };
+		FFB1B2A61EC177CC008873E3 /* HCatpureSessionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCatpureSessionUtils.h; sourceTree = "<group>"; };
+		FFB1B2A71EC177CC008873E3 /* HCatpureSessionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCatpureSessionUtils.m; sourceTree = "<group>"; };
 		FFD081EE1EBACEE700C16B2A /* OBJMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJMaterial.h; sourceTree = "<group>"; };
 		FFD081EF1EBACEE700C16B2A /* OBJMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBJMaterial.m; sourceTree = "<group>"; };
 		FFD081F11EBAD0F100C16B2A /* OBJLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJLoader.h; sourceTree = "<group>"; };
@@ -204,9 +233,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB1B2431EC065F6008873E3 /* libavfilter.a in Frameworks */,
+				FFB1B2461EC065F6008873E3 /* libswresample.a in Frameworks */,
+				FFB1B2421EC065F6008873E3 /* libavdevice.a in Frameworks */,
+				FFB1B2441EC065F6008873E3 /* libavformat.a in Frameworks */,
 				FF152AF51EA4C9A000BA2B1B /* CoreMotion.framework in Frameworks */,
 				FF152AC11EA49BFF00BA2B1B /* OpenGLES.framework in Frameworks */,
+				FFB1B2471EC065F6008873E3 /* libswscale.a in Frameworks */,
 				FF152ABF1EA49BF800BA2B1B /* GLKit.framework in Frameworks */,
+				FFB1B2451EC065F6008873E3 /* libavutil.a in Frameworks */,
+				FFB1B2411EC065F6008873E3 /* libavcodec.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +260,10 @@
 				FF1275EB1EA5B87F00985047 /* HObjectProgram.m */,
 				FFE129C21EADF66F009B4B22 /* HSpriteProgram.h */,
 				FFE129C31EADF66F009B4B22 /* HSpriteProgram.m */,
-				FF1275F21EA5BCAD00985047 /* HAVPlayerProgram.h */,
-				FF1275F31EA5BCAD00985047 /* HAVPlayerProgram.m */,
-				FF1275FD1EA5C2CB00985047 /* HIJKPlayerProgram.h */,
-				FF1275FE1EA5C2CB00985047 /* HIJKPlayerProgram.m */,
+				FFB1B25E1EC15A11008873E3 /* HYUV420Program.h */,
+				FFB1B25F1EC15A11008873E3 /* HYUV420Program.m */,
+				FFB1B2541EC07095008873E3 /* HNv12Program.h */,
+				FFB1B2551EC07095008873E3 /* HNv12Program.m */,
 				FF1276041EA5E39900985047 /* HDistortionProgram.h */,
 				FF1276051EA5E39900985047 /* HDistortionProgram.m */,
 			);
@@ -283,6 +319,7 @@
 		FF152AB41EA49B8200BA2B1B /* renderengine */ = {
 			isa = PBXGroup;
 			children = (
+				FFB1B2A51EC1777D008873E3 /* ar */,
 				FF317AF41EBC43A800369287 /* video */,
 				FF9D2D841EA85C62002CD9E4 /* collision */,
 				FF1276591EA7160300985047 /* testDemo */,
@@ -302,6 +339,8 @@
 		FF152AB51EA49B8200BA2B1B /* render */ = {
 			isa = PBXGroup;
 			children = (
+				FFB1B24B1EC06749008873E3 /* HImage.h */,
+				FFB1B24C1EC06749008873E3 /* HImage.m */,
 			);
 			path = render;
 			sourceTree = "<group>";
@@ -344,6 +383,8 @@
 				FF152AD31EA4A32900BA2B1B /* GLUtils.m */,
 				FF12767E1EA7570D00985047 /* HGLManager.h */,
 				FF12767F1EA7570D00985047 /* HGLManager.m */,
+				FFB1B2481EC0666C008873E3 /* HYUVUtils.h */,
+				FFB1B2491EC0666C008873E3 /* HYUVUtils.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -351,6 +392,13 @@
 		FF152ABD1EA49BDA00BA2B1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFB1B23A1EC065F6008873E3 /* libavcodec.a */,
+				FFB1B23B1EC065F6008873E3 /* libavdevice.a */,
+				FFB1B23C1EC065F6008873E3 /* libavfilter.a */,
+				FFB1B23D1EC065F6008873E3 /* libavformat.a */,
+				FFB1B23E1EC065F6008873E3 /* libavutil.a */,
+				FFB1B23F1EC065F6008873E3 /* libswresample.a */,
+				FFB1B2401EC065F6008873E3 /* libswscale.a */,
 				FF152AF41EA4C9A000BA2B1B /* CoreMotion.framework */,
 				FF152AC01EA49BFF00BA2B1B /* OpenGLES.framework */,
 				FF152ABE1EA49BF800BA2B1B /* GLKit.framework */,
@@ -367,6 +415,10 @@
 				FF317B001EBC4A8E00369287 /* HVideoData.m */,
 				FF1276551EA704F600985047 /* HVideoTexture.h */,
 				FF1276561EA704F600985047 /* HVideoTexture.m */,
+				FFB1B2571EC07825008873E3 /* HFrame.h */,
+				FFB1B2581EC07825008873E3 /* HFrame.m */,
+				FFB1B2511EC06A5B008873E3 /* HNv12Texture.h */,
+				FFB1B2521EC06A5B008873E3 /* HNv12Texture.m */,
 			);
 			path = texture;
 			sourceTree = "<group>";
@@ -445,10 +497,10 @@
 				FF1275EF1EA5BBEB00985047 /* objectShader.fsh */,
 				FFE129C61EADF6E3009B4B22 /* spriteShader.vsh */,
 				FFE129C51EADF6E3009B4B22 /* spriteShader.fsh */,
-				FF1275F61EA5BCE300985047 /* avplayerShader.vsh */,
-				FF1275F51EA5BCE300985047 /* avplayerShader.fsh */,
-				FF1275F81EA5BCE300985047 /* ijkplayerShader.vsh */,
-				FF1275F71EA5BCE300985047 /* ijkplayerShader.fsh */,
+				FF1275F61EA5BCE300985047 /* nv12Shader.vsh */,
+				FF1275F51EA5BCE300985047 /* nv12Shader.fsh */,
+				FF1275F81EA5BCE300985047 /* yuv420Shader.vsh */,
+				FF1275F71EA5BCE300985047 /* yuv420Shader.fsh */,
 				FF317AC81EBB13A200369287 /* distortionShader.vsh */,
 				FF317AC71EBB13A200369287 /* distortionShader.fsh */,
 			);
@@ -462,6 +514,15 @@
 				FF9D2D8E1EA85C75002CD9E4 /* HCamera.m */,
 			);
 			path = collision;
+			sourceTree = "<group>";
+		};
+		FFB1B2A51EC1777D008873E3 /* ar */ = {
+			isa = PBXGroup;
+			children = (
+				FFB1B2A61EC177CC008873E3 /* HCatpureSessionUtils.h */,
+				FFB1B2A71EC177CC008873E3 /* HCatpureSessionUtils.m */,
+			);
+			path = ar;
 			sourceTree = "<group>";
 		};
 		FFD081ED1EBACEB100C16B2A /* OBJ */ = {
@@ -590,16 +651,16 @@
 				FF317B041EBC678300369287 /* fire.mp4 in Resources */,
 				FFAF4A3B1EB0AC9300188639 /* lemur.png in Resources */,
 				FF12766A1EA73FDB00985047 /* 6.jpg in Resources */,
-				FF1275FC1EA5BCE300985047 /* ijkplayerShader.vsh in Resources */,
+				FF1275FC1EA5BCE300985047 /* yuv420Shader.vsh in Resources */,
 				FF152AD01EA4A1B500BA2B1B /* ReadMe in Resources */,
 				FFE129C81EADF6E3009B4B22 /* spriteShader.vsh in Resources */,
 				FFE44CA31EA4737600A4D95A /* LaunchScreen.storyboard in Resources */,
 				FFE44CA01EA4737600A4D95A /* Assets.xcassets in Resources */,
-				FF1275F91EA5BCE300985047 /* avplayerShader.fsh in Resources */,
+				FF1275F91EA5BCE300985047 /* nv12Shader.fsh in Resources */,
 				FFE44C9E1EA4737600A4D95A /* Main.storyboard in Resources */,
-				FF1275FB1EA5BCE300985047 /* ijkplayerShader.fsh in Resources */,
+				FF1275FB1EA5BCE300985047 /* yuv420Shader.fsh in Resources */,
 				FFD082011EBAF5BF00C16B2A /* EyesWhite.jpg in Resources */,
-				FF1275FA1EA5BCE300985047 /* avplayerShader.vsh in Resources */,
+				FF1275FA1EA5BCE300985047 /* nv12Shader.vsh in Resources */,
 				FFD081FB1EBADFB000C16B2A /* complicate.obj in Resources */,
 				FF1275F11EA5BBEB00985047 /* objectShader.fsh in Resources */,
 				FF317ACA1EBB13A200369287 /* distortionShader.vsh in Resources */,
@@ -620,11 +681,11 @@
 				FF1276571EA704F600985047 /* HVideoTexture.m in Sources */,
 				FF152ABA1EA49B8F00BA2B1B /* HNode.m in Sources */,
 				FF1276651EA738CC00985047 /* HGLNormalModel.m in Sources */,
-				FF1275FF1EA5C2CB00985047 /* HIJKPlayerProgram.m in Sources */,
 				FF1276621EA7386A00985047 /* HGLModel.m in Sources */,
 				FF152AED1EA4C84500BA2B1B /* HCameraMatrix.m in Sources */,
 				FFE44C9B1EA4737600A4D95A /* ViewController.m in Sources */,
 				FFD081F31EBAD0F100C16B2A /* OBJLoader.m in Sources */,
+				FFB1B2561EC07095008873E3 /* HNv12Program.m in Sources */,
 				FF317AFA1EBC43E000369287 /* VIMVideoPlayer.m in Sources */,
 				FF152AFA1EA4D7BC00BA2B1B /* HDistortionModel.m in Sources */,
 				FFAF4B661EB9E7F300188639 /* HCubeNorm.m in Sources */,
@@ -633,7 +694,9 @@
 				FF317AFE1EBC45D300369287 /* HVideo.m in Sources */,
 				FF317AFB1EBC43E000369287 /* VIMVideoPlayerView.m in Sources */,
 				FFE44C951EA4737600A4D95A /* main.m in Sources */,
+				FFB1B2601EC15A11008873E3 /* HYUV420Program.m in Sources */,
 				FF152AE11EA4A8C400BA2B1B /* HSprite3D.m in Sources */,
+				FFB1B2591EC07825008873E3 /* HFrame.m in Sources */,
 				FF12765C1EA7165900985047 /* HDemosVc.m in Sources */,
 				FF152AFD1EA4D7E000BA2B1B /* HDistortionRender.m in Sources */,
 				FF9D2D931EA85C75002CD9E4 /* HCamera.m in Sources */,
@@ -645,17 +708,20 @@
 				FF1276061EA5E39900985047 /* HDistortionProgram.m in Sources */,
 				FF1276801EA7570D00985047 /* HGLManager.m in Sources */,
 				FF1276541EA61CFE00985047 /* HGLKViewController.m in Sources */,
+				FFB1B2A81EC177CC008873E3 /* HCatpureSessionUtils.m in Sources */,
 				FFD081F01EBACEE700C16B2A /* OBJMaterial.m in Sources */,
-				FF1275F41EA5BCAD00985047 /* HAVPlayerProgram.m in Sources */,
 				FF1275EC1EA5B87F00985047 /* HObjectProgram.m in Sources */,
 				FFAF4B5C1EB9B73600188639 /* HCubeT.m in Sources */,
 				FF152AC61EA49F2B00BA2B1B /* HTexture.m in Sources */,
+				FFB1B2531EC06A5B008873E3 /* HNv12Texture.m in Sources */,
+				FFB1B24D1EC06749008873E3 /* HImage.m in Sources */,
 				FF152AF31EA4C92900BA2B1B /* HFingerRotation.m in Sources */,
 				FFD081F91EBAD5EE00C16B2A /* HOBJNode.m in Sources */,
 				FFAF4B561EB89CD700188639 /* HSprite.m in Sources */,
 				FF9613E21EAA0AC400307FAC /* HMathUtils.m in Sources */,
 				FF1276681EA7391B00985047 /* HGLVRModel.m in Sources */,
 				FFAF4B591EB9A2A300188639 /* HBaseEffect.m in Sources */,
+				FFB1B24A1EC0666C008873E3 /* HYUVUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +845,10 @@
 				GCC_PREFIX_HEADER = "/Users/huangshiping/Documents/GitHub项目/HRenderEngine/HRenderEngine/HRenderEngine/renderengine/utils/RenderEngine.pch";
 				INFOPLIST_FILE = HRenderEngine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HRenderEngine/ffmpeg",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangshiping.org.HRenderEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -792,6 +862,10 @@
 				GCC_PREFIX_HEADER = "/Users/huangshiping/Documents/GitHub项目/HRenderEngine/HRenderEngine/HRenderEngine/renderengine/utils/RenderEngine.pch";
 				INFOPLIST_FILE = HRenderEngine/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HRenderEngine/ffmpeg",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.huangshiping.org.HRenderEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

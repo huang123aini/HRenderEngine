@@ -346,31 +346,6 @@
     
 }
 
-
--(void)renderWithParentModelViewMatrix:(GLKMatrix4)parentModelViewMatrix
-{
-    GLKMatrix4 modelViewMatrix = GLKMatrix4Multiply(parentModelViewMatrix, [self modelMatrix]);
-    _shader.modelViewMatrix = modelViewMatrix;
-    _shader.texture = self.texture.textureId;
-    [_shader prepareToDraw];
-    glBindVertexArrayOES(_verticesArrayBuffer);
-    switch (_primitiveType)
-    {
-        case TriangleList:
-            glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_BYTE, 0);
-            break;
-        case TriangleStrip:
-            glDrawArrays(GL_TRIANGLE_STRIP, 0, _vertexCount);
-            break;
-        case Triangles:
-            glDrawArrays(GL_TRIANGLES, 0, _vertexCount);
-            break;
-        default:
-            break;
-    }
-    glBindVertexArrayOES(0);
-}
-
 -(void)loadTexture:(UIImage*)image
 {
     self.texture = [[HTexture alloc] init];

@@ -45,8 +45,6 @@
 
 -(instancetype)initWithShader:(HBaseEffect*)shader objData:(OBJModelData*)data;
 
--(void)render;
--(void)renderWithParentModelViewMatrix:(GLKMatrix4)parentModelViewMatrix;
 
 
 -(void)loadTexture:(UIImage*)image;

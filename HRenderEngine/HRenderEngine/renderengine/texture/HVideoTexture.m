@@ -110,6 +110,7 @@
 - (void)destory
 {
     if (self.mContextTextureMap == nil) return;
+    
     for (NSString * key in self.mContextTextureMap)
     {
         NSValue * value = [self.mContextTextureMap objectForKey:key];

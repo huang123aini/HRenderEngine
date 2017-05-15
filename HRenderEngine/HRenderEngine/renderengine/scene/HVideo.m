@@ -163,10 +163,10 @@
 
 -(void)draw:(GLKMatrix4)projectionMatrix
 {
-//    if (self.model == nil || self.program == nil)
-//    {
-//        return;
-//    }
+    if (self.model == nil || self.program == nil)
+    {
+        return;
+    }
     
     if (!_isPrepareToPlay) return;
     _renderTime ++;
@@ -190,5 +190,33 @@
     
     glDrawElements(GL_TRIANGLES, self.model.indexCount, GL_UNSIGNED_SHORT, 0);
     
+}
+
+-(void)dealloc
+{
+    if (_videoTexture)
+    {
+        _videoTexture = nil;
+    }
+    
+    if (self.program)
+    {
+        self.program = nil;
+    }
+    
+    if (self.texture)
+    {
+        self.texture = nil;
+    }
+    
+    if (self.vrModel)
+    {
+        self.vrModel = nil;
+    }
+    
+    if (self.avPlayer)
+    {
+        self.avPlayer = nil;
+    }
 }
 @end

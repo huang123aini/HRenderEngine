@@ -41,7 +41,19 @@
 
 -(void)dealloc
 {
+    if (_vertexBuffer)
+    {
+        _vertexBuffer = 0;
+    }
     
+    if (_indexBuffer)
+    {
+        _indexBuffer = 0;
+    }
+    if (_texCoordBuffer)
+    {
+        _texCoordBuffer = 0;
+    }
 }
 
 @end

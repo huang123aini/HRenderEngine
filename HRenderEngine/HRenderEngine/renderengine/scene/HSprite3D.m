@@ -66,5 +66,22 @@
     
 }
 
+-(void)dealloc
+{
+    if(self.program)
+    {
+        self.program = nil;
+    }
+    
+    if (self.texture)
+    {
+        self.texture = nil;
+    }
+    
+    if (self.model)
+    {
+        self.model = nil;
+    }
+}
 
 @end

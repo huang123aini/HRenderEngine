@@ -20,7 +20,6 @@ const static VertexColor vertices[] =
 @interface HSprite()
 
 @property(nonatomic,assign)VertexTexCoord* verticesT;
-//@property(nonatomic,assign)GLubyte*        indicesT;
 
 @end
 
